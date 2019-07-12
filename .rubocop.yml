@@ -1,0 +1,73 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  TargetRailsVersion: 5.2
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: false
+  Exclude:
+    - 'bin/**/*'
+    - 'config/application.rb'
+    - 'config/boot.rb'
+    - 'config/environment.rb'
+    - 'config/environments/*'
+    - 'config/routes.rb'
+    - 'config/spring.rb'
+    - 'db/schema.rb'
+    - 'lib/tasks/auto_annotate_models.rake'
+    - 'tmp/*'
+
+Rails:
+  Enabled: true
+
+GlobalVars:
+  AllowedVariables:
+    - $redis
+    - $elasticsearch
+    - $rollout
+
+Documentation:
+  Enabled: false
+
+Layout/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - lib/tasks/**/*
+    - ./**/concerns/*
+    - lib/string_cleaner/constants.rb
+
+Metrics/LineLength:
+  Max: 120
+
+Rails/SkipsModelValidations:
+  Exclude:
+    - test/**/*.rb
+  Whitelist:
+    - touch
+
+Rails/UniqBeforePluck:
+  EnforcedStyle: aggressive
+
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+
+Style/SignalException:
+  EnforcedStyle: semantic
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
