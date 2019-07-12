@@ -33,6 +33,7 @@ gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 # Admin interface
 gem "activeadmin"
+gem "devise"
 # decorator, for display methods
 gem "draper"
 
