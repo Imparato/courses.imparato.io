@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get '/', to: 'sites#companies_in_city'
-
+  get '/', to: 'sites#show'
+  get '/:slug', to: 'cross_pages#show'
 end
