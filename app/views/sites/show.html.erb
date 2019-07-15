@@ -1,0 +1,15 @@
+
+<h1>
+
+</h1>
+<p><%= request.original_url %></p>
+<p><%= request.fullpath %></p>
+
+<% @cross_pages.each do |cross_page| %>
+  <%= link_to cross_page.tags.first.name.capitalize, "#{cross_page.slug}" %>
+<% end %>
+
+<p><%= @city %></p>
+<% @companies.each do |company| %>
+<p><%= company.name %></p>
+<% end %>

@@ -21,7 +21,7 @@ puts "AdminUser created, creating seeds"
 puts "creating coursamarseille as a site"
 
 coursamarseille = Site.create!(
-  domain_name:      "coursdetheatremarseille",
+  domain_name:      "coursdetheatremarseille.com",
   name:             "Cours de théâtre à Marseille",
   meta_title:       "Trouvez les meilleurs cours à marseille",
   meta_description: "meta_description à remplir",
@@ -58,6 +58,15 @@ marseilleimpro = CrossPage.create!(
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
   site:             coursamarseille,
 )
+marseillelundi = CrossPage.create!(
+  slug:             "lundi-a-marseille",
+  title:            "Cours d'improvisation sur Marseille",
+  description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
+  active:           "true",
+  meta_title:       "Marseille PACA Bouche du Rhone 13",
+  meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
+  site:             coursamarseille,
+)
 
 puts "Creating tags"
 
@@ -74,6 +83,7 @@ puts "adding tags to existing company and crosspage"
 
 tetard.tags << lundi
 marseilleimpro.tags << impro
+marseillelundi.tags << lundi
 # << Tag.create!(name: 'lundi')
 # Tetard.tags << Tag.create!(name: 'impro')
 
