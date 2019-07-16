@@ -2,7 +2,7 @@
 
 ActiveAdmin.register CrossPage do
   permit_params do
-    permitted = [:slug, :meta_title, :meta_description, :title, :description, :active, :site_id, tag_ids: []]
+    permitted = [:slug, :meta_title, :meta_description, :title, :description, :banner, :active, :site_id, tag_ids: []]
     permitted << :other if params[:action] == "create" && current_admin_user
     permitted
   end
@@ -12,6 +12,7 @@ ActiveAdmin.register CrossPage do
     id_column
     column :site
     column :slug
+    column :banner
     column :title
     column :description
     column :active
@@ -29,6 +30,7 @@ ActiveAdmin.register CrossPage do
     attributes_table do
       row :site
       row :slug
+      row :banner
       row :title
       row :description
       row :active
@@ -44,6 +46,7 @@ ActiveAdmin.register CrossPage do
     f.inputs "Add/Edit Article" do
       f.input :site
       f.input :slug
+      f.input :banner
       f.input :title
       f.input :description
       f.input :meta_title

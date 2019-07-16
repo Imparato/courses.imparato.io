@@ -33,6 +33,8 @@ gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 # Admin interface
 gem "activeadmin"
+gem "carrierwave", "~> 1.2"
+gem "cloudinary", "~> 1.9.1"
 gem "devise"
 # decorator, for display methods
 gem "draper"
@@ -41,6 +43,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "annotate"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "dotenv-rails", groups: [:development, :test]
   gem "rubocop", require: false
   gem "rubocop-performance"
   gem "rubocop-rails"
