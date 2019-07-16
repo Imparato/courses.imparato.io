@@ -1,15 +1,9 @@
-ActiveAdmin.register Site do
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+# frozen_string_literal: true
 
+ActiveAdmin.register Site do
+  permit_params do
+    permitted = [:name, :domain_name, :meta_title, :meta_description, :banner, :title, :description, :active, :analytics]
+    permitted << :other if params[:action] == "create" && current_admin_user
+    permitted
+  end
 end

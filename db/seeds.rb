@@ -29,7 +29,7 @@ coursamarseille = Site.create!(
   title:            "Marseille",
   description:      "description à remplir",
   active:           "true",
-  analytics_id:     "2",
+  analytics:        "2",
 )
 
 puts "Creating Tetard as a Company"
