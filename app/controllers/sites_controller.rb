@@ -5,7 +5,7 @@ class SitesController < ApplicationController
   def show
     # domain name to delete
     @domain_name = "coursdetheatremarseille.com"
-    @site = Site.where(domain_name: @domain_name)
+    @site = Site.find_by(domain_name: @domain_name)
     @companies = Company.where(site: @site)
     @cross_pages = CrossPage.where(site: @site, active: true)
   end

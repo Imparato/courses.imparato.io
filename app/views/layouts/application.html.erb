@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CoursesImparatoIo</title>
+    <%= content_for?(:meta) ? yield(:meta) : yield %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 

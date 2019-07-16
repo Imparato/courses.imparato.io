@@ -1,3 +1,9 @@
+<!-- insert meta information of page -->
+<% content_for :meta do %>
+  <title><%= @cross_page.meta_title %></title>
+  <meta name="description" content= "<%= @cross_page.meta_description %>">
+<% end %>
+
 hello
 
 <%= @cross_page.title %>

@@ -1,3 +1,11 @@
+<!-- insert meta information of page -->
+<% content_for :meta do %>
+  <title><%= @site.meta_title %></title>
+  <meta name="description" content= "<%= @site.meta_description %>">
+<% end %>
+
+
+
 
 <h1>
 
@@ -13,3 +21,4 @@
 <% @companies.each do |company| %>
 <p><%= company.name %></p>
 <% end %>
+
