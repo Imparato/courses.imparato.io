@@ -1,6 +1,11 @@
+# frozen_string_literal: true
+
 ActiveAdmin.register CrossPage do
-  actions :all
-   permit_params :slug, :title, :description, :active, :meta_title, :meta_description, :site_id, :tag_ids => []
+  permit_params do
+    permitted = [:slug, :meta_title, :meta_description, :title, :description, :active, :site_id, :tag_ids => []]
+    permitted << :other if params[:action] == "create" && current_admin_user
+    permitted
+  end
 
   index do
   id_column
@@ -50,18 +55,4 @@ form do |f|
     f.input :tags, :as => :check_boxes
   end
   actions
-end
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
-
 end
