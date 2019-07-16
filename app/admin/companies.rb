@@ -55,4 +55,9 @@ ActiveAdmin.register Company do
     end
     actions
   end
+  filter :site
+  filter :name
+  filter :address
+  filter :description
+  filter :tags
 end

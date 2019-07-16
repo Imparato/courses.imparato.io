@@ -55,4 +55,10 @@ ActiveAdmin.register CrossPage do
     end
     actions
   end
+  filter :site
+  filter :slug
+  filter :title
+  filter :description
+  filter :active
+  filter :tags
 end
