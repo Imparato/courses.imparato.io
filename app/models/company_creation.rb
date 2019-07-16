@@ -1,0 +1,3 @@
+class CompanyCreation < ApplicationRecord
+
+end
