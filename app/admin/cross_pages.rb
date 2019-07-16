@@ -8,8 +8,8 @@ ActiveAdmin.register CrossPage do
   end
 
   index do
-    id_column
     selectable_column
+    id_column
     column :site
     column :slug
     column :title
@@ -18,7 +18,7 @@ ActiveAdmin.register CrossPage do
     column :meta_title
     column :meta_description
     column :tags do |cross_page|
-      table_for cross_page.tags.order("name ASC") do
+      cross_page.tags.order("name ASC") do
         column(&:name)
       end
     end
@@ -34,10 +34,8 @@ ActiveAdmin.register CrossPage do
       row :active
       row :meta_title
       row :meta_description
-      table_for cross_page.tags.order("name ASC") do
-        column "tags" do |tag|
-          link_to tag.name, [:admin, tag]
-        end
+      attributes_table_for cross_page do
+        row :tags
       end
     end
   end
@@ -48,10 +46,10 @@ ActiveAdmin.register CrossPage do
       f.input :slug
       f.input :title
       f.input :description
-      f.input :active
       f.input :meta_title
       f.input :meta_description
       f.input :tags, as: :check_boxes
+      f.input :active, as: :radio
     end
     actions
   end

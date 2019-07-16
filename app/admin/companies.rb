@@ -18,7 +18,7 @@ ActiveAdmin.register Company do
     column :lat
     column :lng
     column :tags do |company|
-      table_for company.tags.order("name ASC") do
+      company.tags.order("name ASC") do
         column(&:name)
       end
     end
@@ -34,10 +34,8 @@ ActiveAdmin.register Company do
       row :mail
       row :lat
       row :lng
-      table_for company.tags.order("name ASC") do
-        column "tags" do |tag|
-          link_to tag.name, [:admin, tag]
-        end
+      attributes_table_for company do
+        row :tags
       end
     end
   end

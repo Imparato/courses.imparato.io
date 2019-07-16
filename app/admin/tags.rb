@@ -6,5 +6,5 @@ ActiveAdmin.register Tag do
     permitted << :other if params[:action] == "create" && current_admin_user
     permitted
   end
-    filter :name, as: :select
+  filter :name, as: :select
 end
