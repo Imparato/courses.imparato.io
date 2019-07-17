@@ -38,6 +38,8 @@ gem "cloudinary", "~> 1.9.1"
 gem "devise"
 # decorator, for display methods
 gem "draper"
+# markdown
+gem "redcarpet"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
