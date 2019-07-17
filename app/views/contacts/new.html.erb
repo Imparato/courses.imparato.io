@@ -1,0 +1,14 @@
+<!-- insert meta information of page -->
+<% content_for :meta do %>
+  <title><%= @site.meta_title %></title>
+  <meta name="description" content= "<%= @site.meta_description %>">
+<% end %>
+
+
+<%= simple_form_for @contact do |f| %>
+  <%= f.input :user %>
+  <%= f.input :user_info %>
+  <%= f.input :email %>
+  <%= f.input :body %>
+  <%= f.button :submit %>
+<% end %>
