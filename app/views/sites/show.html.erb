@@ -24,3 +24,5 @@
 
 <%= link_to "Add your company", new_company_path %> <br>
 <%= link_to "Contact an admin ", new_contact_path %>
+<%= @markdown.render("This is *bongos*, indeed.").html_safe %>
+
