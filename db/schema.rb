@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_07_16_133833) do
 
   # These are extensions that must be enabled in order to support this database
@@ -51,12 +52,22 @@ ActiveRecord::Schema.define(version: 2019_07_16_133833) do
     t.bigint "site_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active"
     t.index ["site_id"], name: "index_companies_on_site_id"
   end
 
   create_table "companies_tags", id: false, force: :cascade do |t|
     t.bigint "company_id", null: false
     t.bigint "tag_id", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "user"
+    t.string "user_info"
+    t.string "email"
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "cross_pages", force: :cascade do |t|
