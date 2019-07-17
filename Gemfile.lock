@@ -228,6 +228,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    redcarpet (3.4.0)
     regexp_parser (1.5.1)
     request_store (1.4.1)
       rack (>= 1.4)
@@ -335,6 +336,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.3)
+  redcarpet
   rubocop
   rubocop-performance
   rubocop-rails
@@ -350,4 +352,4 @@ RUBY VERSION
    ruby 2.5.3p105
 
 BUNDLED WITH
-   2.0.1
+   2.0.2
