@@ -23,7 +23,7 @@ gem "jbuilder", "~> 2.5"
 gem "simple_form"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem "jquery-rails"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -39,6 +39,7 @@ gem "cloudinary", "~> 1.9.1"
 gem "devise"
 # decorator, for display methods
 gem "draper"
+gem 'font-awesome-sass', '~> 5.6.1'
 #markdown
 gem "redcarpet"
 

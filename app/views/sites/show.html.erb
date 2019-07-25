@@ -4,15 +4,15 @@
   <meta name="description" content= "<%= @site.meta_description %>">
 <% end %>
 
-
-
-
-<h1>
-  "hello"
-</h1>
-<p><%= request.original_url %></p>
+<!-- <p><%= request.original_url %></p>
 <p><%= request.fullpath %></p>
+ -->
+<%= image_tag("photo_marseille.jpeg") %>
 
+                    <%= image_tag "slides/1.jpg", alt: "coucou", class: "class", data: { bgposition: "center center", kenburns: "off", duration: "30000", ease: "Linear.easeNone", scalestart: "100", scaleend: "120", rotatestart: "0",rotateend: "0", offsetstart: "0 0", offsetend: "0 0", bgparallax: "10" }%>
+
+
+<!--
 <% @cross_pages.each do |cross_page| %>
   <%= link_to cross_page.tags.first.name.capitalize, "#{cross_page.slug}" %>
 <% end %>
@@ -25,4 +25,1003 @@
 <%= link_to "Add your company", new_company_path %> <br>
 <%= link_to "Contact an admin ", new_contact_path %>
 <%= @markdown.render("This is *bongos*, indeed.").html_safe %>
+ -->
 
+<body class="header_sticky">
+<!-- Start Loader -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_four"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_one"></div>
+        </div>
+    </div>
+</div>
+<!-- End Loader -->
+<div class="boxed">
+    <!-- Start Header -->
+    <header id="header" class="header clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- Start Logo -->
+                    <div id="logo" class="logo float-left">
+                        <a href="home-1.html" rel="home">
+                          <%= image_tag("logo.png", alt: "ListLand") %>
+                        </a>
+                    </div>
+                    <!-- End Header -->
+                    <div class="btn-menu">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="nav-wrap">
+                        <!-- Start Menu -->
+                        <nav id="mainnav" class="mainnav float-left">
+                            <ul class="menu">
+                                <li class="home"><a href="#"></a>
+                                    <ul class="submenu">
+                                        <li class="active"><a href="home-1.html"></a></li>
+                                        <li><a href="home-2.html"></a></li>
+                                        <li><a href="home-3.html"></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Listings</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Listings Grid</a>
+                                            <ul class="submenu">
+                                                <li><a href="listing-grid-ls.html">Grid Left Sidebar</a></li>
+                                                <li><a href="listing-grid-rs.html">Grid Right Sidebar</a></li>
+                                                <li><a href="listing-grid-ns.html">Grid No Sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Listings List</a>
+                                            <ul class="submenu">
+                                                <li><a href="listing-list-ls.html">List Left Sidebar</a></li>
+                                                <li><a href="listing-list-rs.html">List Right Sidebar</a></li>
+                                                <li><a href="listing-list-ns.html">List No Sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Single Listing</a>
+                                            <ul class="submenu">
+                                                <li><a href="single-listing-ls.html">Single Left Sidebar</a></li>
+                                                <li><a href="single-listing-rs.html">Single Right Sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">News</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">News List</a>
+                                            <ul class="submenu">
+                                                <li><a href="news-ls.html">News Left Sidebar</a></li>
+                                                <li><a href="news-rs.html">News Right Sidebar</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Single News</a>
+                                            <ul class="submenu">
+                                                <li><a href="single-news-ls.html">Single Left Sidebar</a></li>
+                                                <li><a href="single-news-rs.html">Single Right Sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Pages</a>
+                                    <ul class="submenu">
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="services.html">Services</a></li>
+                                        <li><a href="user-profile.html">User Profile</a></li>
+                                        <li><a href="edit-profile.html">Edit Profile</a></li>
+                                        <li><a href="add-listing.html">Add Listing</a></li>
+                                        <li><a href="404.html">404 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" href="#popup_login"><i class="fa fa-user"></i> SignIn</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" href="#popup_register"><i class="fa fa-user-plus"></i> SignUp</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- End Menu -->
+                        <div class="button-addlist float-right">
+                            <button type="button" class="flat-button" onclick="location.href='add-listing.html'">Add Listing</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Revolution Slider -->
+    <div id="rev_slider_1078_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="classic4export" data-source="gallery">
+        <div id="rev_slider_1078_1" class="rev_slider fullwidthabanner" data-version="5.3.0.2">
+            <div class="slotholder"></div>
+            <ul>
+                <!-- Start Slide #1 -->
+                <li data-index="rs-3050" data-transition="slideremovedown" data-slotamount="7" data-hideafterloop="0"
+                    data-hideslideonmobile="off" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut"
+                    data-masterspeed="2000" data-rotate="0" data-saveperformance="off" data-title="Ken Burns"
+                    data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
+                    data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <img src="assets/images/slides/1.jpg" alt="" data-bgposition="center center" data-kenburns="off"
+                         data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120"
+                         data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0"
+                         data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                    <div class="tp-caption title-slide"
+                         id="slide-3050-layer-1"
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                         data-y="['middle','middle','middle','middle']" data-voffset="['-128','-128','-128','-50']"
+                         data-fontsize="['65','65','45','30']"
+                         data-lineheight="['65','65','45','35']"
+                         data-fontweight="['600','600','600','600']"
+                         data-width="none"
+                         data-height="none"
+                         data-whitespace="nowrap"
+                         data-type="text"
+                         data-responsive_offset="on"
+                         data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                         data-textAlign="['center','center','center','center']"
+                         data-paddingtop="[10,10,10,10]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0"
+                         data-paddingleft="[0,0,0,0]">We will help you to find all
+                    </div>
+                    <div class="tp-caption sub-title"
+                         id="slide-3050-layer-4"
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                         data-y="['middle','middle','middle','middle']" data-voffset="['-32','-32','-32','20']"
+                         data-fontsize="['20',20','20','14']"
+                         data-lineheight="['35','35','35','20']"
+                         data-fontweight="['300','300','300','300']"
+                         data-width="['1200','660','660','350']"
+                         data-height="none"
+                         data-whitespace="['nowrap',normal','normal','normal']"
+                         data-type="text"
+                         data-responsive_offset="on"
+                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                         data-textAlign="['center','center','center','center']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]">Find great places, hotels, restourants <span>just click </span>
+                         Explore some of the best tips from around<br>the city from our partners and friends ...
+                    </div>
+                </li>
+                <!-- End Slide #1 -->
+                <!-- Start Slide #2 -->
+                <li data-index="rs-3051" data-transition="slideremovedown" data-slotamount="7" data-hideafterloop="0"
+                    data-hideslideonmobile="off" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut"
+                    data-masterspeed="2000" data-rotate="0" data-saveperformance="off" data-title="Ken Burns"
+                    data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
+                    data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <img src="assets/images/slides/2.jpg" alt="" data-bgposition="center center" data-kenburns="off"
+                         data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120"
+                         data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0"
+                         data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                    <div class="tp-caption title-slide"
+                         id="slide-3051-layer-1"
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                         data-y="['middle','middle','middle','middle']" data-voffset="['-128','-128','-128','-50']"
+                         data-fontsize="['65','65','45','30']"
+                         data-lineheight="['65','65','45','35']"
+                         data-fontweight="['600','600','600','600']"
+                         data-width="none"
+                         data-height="none"
+                         data-whitespace="nowrap"
+                         data-type="text"
+                         data-responsive_offset="on"
+                         data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                         data-textAlign="['center','center','center','center']"
+                         data-paddingtop="[10,10,10,10]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0"
+                         data-paddingleft="[0,0,0,0]">Discover Our Categories
+                    </div>
+                    <div class="tp-caption sub-title"
+                         id="slide-3051-layer-4"
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                         data-y="['middle','middle','middle','middle']" data-voffset="['-32','-32','-32','20']"
+                         data-fontsize="['20',20','20','14']"
+                         data-lineheight="['35','35','35','20']"
+                         data-fontweight="['300','300','300','300']"
+                         data-width="['1200','660','660','300']"
+                         data-height="none"
+                         data-whitespace="nowrap"
+                         data-type="text"
+                         data-responsive_offset="on"
+                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                         data-textAlign="['center','center','center','center']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]">Find great places, hotels, restourants <span>just click </span><br>
+                         Constant care and attention to the patients makes good record ...
+                    </div>
+                </li>
+                <!-- End Slide #2 -->
+            </ul>
+        </div>
+    </div>
+    <!-- End Revolution Slider -->
+    <div class="container search-form">
+        <!-- Start Search Form -->
+        <div class="wrap-form">
+            <div class="flat-formsearch ">
+                <form novalidate="" class="search-form form-filter clearfix" id="searchform" method="post" action="#">
+                <span class="input-question">
+                    <input type="text" placeholder="What are your looking for?" name="question" id="question">
+                    </span>
+                        <span class="input-location">
+                        <input type="text" placeholder="Location" name="location" id="location">
+                        <span class="filter">
+                            <input id="ex8" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5">
+                        </span>
+                    </span>
+                    <span class="select">
+                    <select>
+                        <option>All Categories</option>
+                        <option>Hotels & Travel</option>
+                        <option>Restaurants</option>
+                        <option>Healthy & Fitness</option>
+                        <option>Food & Coffee</option>
+                    </select>
+                </span>
+                    <span class="form-submit text-right">
+                    <button class="flat-button">Search<i class="ion-ios-search-strong"></i></button>
+                </span>
+                </form>
+            </div>
+        </div>
+        <!-- End Search Form -->
+    </div>
+    <!-- Start Featured Categories -->
+    <section class="flat-row section-client">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-section text-center">
+                        <h1 class="title">Featured Categories</h1>
+                        <div class="sub-title">Explore some of the best tips from around the city from our partners and friends</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="flat-client" data-item="4" data-nav="true" data-dots="false" data-auto="false">
+                        <div class="client">
+                            <div class="featured-client">
+                                <img src="assets/images/clients/1.jpg" alt="image">
+                            </div>
+                            <div class="content-client clearfix">
+                                <div class="icon">
+                                    <img src="assets/images/clients/icon1.png" alt="image">
+                                </div>
+                                <div class="text">
+                                    <h6><a href="#" title="">Hotels & Travel</a></h6>
+                                    <p>27 Listing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="client">
+                            <div class="featured-client">
+                                <img src="assets/images/clients/2.jpg" alt="image">
+                            </div>
+                            <div class="content-client clearfix">
+                                <div class="icon">
+                                    <img src="assets/images/clients/icon2.png" alt="image">
+                                </div>
+                                <div class="text">
+                                    <h6><a href="#" title="">Healthy & Fitness</a></h6>
+                                    <p>31 Listing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="client">
+                            <div class="featured-client">
+                                <img src="assets/images/clients/3.jpg" alt="image">
+                            </div>
+                            <div class="content-client clearfix">
+                                <div class="icon">
+                                    <img src="assets/images/clients/icon3.png" alt="image">
+                                </div>
+                                <div class="text">
+                                    <h6><a href="#" title="">Real Estate</a></h6>
+                                    <p>45 Listing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="client">
+                            <div class="featured-client">
+                                <img src="assets/images/clients/4.jpg" alt="image">
+                            </div>
+                            <div class="content-client clearfix">
+                                <div class="icon">
+                                    <img src="assets/images/clients/icon4.png" alt="image">
+                                </div>
+                                <div class="text">
+                                    <h6><a href="#" title="">Restaurants</a></h6>
+                                    <p>17 Listing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="client">
+                            <div class="featured-client">
+                                <img src="assets/images/clients/5.jpg" alt="image">
+                            </div>
+                            <div class="content-client clearfix">
+                                <div class="icon">
+                                    <img src="assets/images/clients/icon5.png" alt="image">
+                                </div>
+                                <div class="text">
+                                    <h6><a href="#" title="">Events</a></h6>
+                                    <p>29 Listing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="client">
+                            <div class="featured-client">
+                                <img src="assets/images/clients/6.jpg" alt="image">
+                            </div>
+                            <div class="content-client clearfix">
+                                <div class="icon">
+                                    <img src="assets/images/clients/icon6.png" alt="image">
+                                </div>
+                                <div class="text">
+                                    <h6><a href="#" title="">Shopping</a></h6>
+                                    <p>86 Listing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Featured Categories -->
+    <!-- Start Popular Listings -->
+    <section class="flat-row section-product bg-theme">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-section text-center">
+                        <h1 class="title">Popular Listings</h1>
+                        <div class="sub-title">Some great addresses you should not miss</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="wrap-flat-product clearfix">
+                    <div class="flat-product">
+                        <div class="featured-product">
+                            <img src="assets/images/services/1.jpg" alt="image">
+                            <div class="time bg-green">Opened</div>
+                            <div class="rate-product">
+                                <div class="link-review clearfix">
+                                    <div class="button-product float-left">
+                                        <button type="button" class="flat-button" onclick="location.href='#'">bars</button>
+                                    </div>
+                                    <div class="start-review float-right">
+                                        <span class="flat-start">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <a href="#" class="review">2 reviewers</a>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h6 class="title"><a href="#">Grand Prairie Restaurants</a></h6>
+                                    <p>221B Baker Street, London, UK</p>
+                                    <a href="#" class="heart">
+                                        <i class="ion-android-favorite-outline"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-product">
+                            <div class="tm">TS</div>
+                            <div class="text">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry ...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flat-product">
+                        <div class="featured-product">
+                            <img src="assets/images/services/2.jpg" alt="image">
+                            <div class="time">Closed</div>
+                            <div class="rate-product">
+                                <div class="link-review clearfix">
+                                    <div class="button-product float-left">
+                                        <button type="button" class="flat-button" onclick="location.href='#'">Hotel</button>
+                                    </div>
+                                    <div class="start-review float-right">
+                                        <span class="flat-start">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </span>
+                                        <a href="#" class="review">7 reviewers</a>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h6 class="title"><a href="#">San Antonio Hotel</a></h6>
+                                    <p>221B Baker Street, London, UK</p>
+                                    <a href="#" class="heart">
+                                        <i class="ion-android-favorite-outline"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-product">
+                            <div class="tm">AW</div>
+                            <div class="text">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry ...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flat-product">
+                        <div class="featured-product">
+                            <img src="assets/images/services/3.jpg" alt="image">
+                            <div class="time bg-green">Opened</div>
+                            <div class="rate-product">
+                                <div class="link-review clearfix">
+                                    <div class="button-product float-left">
+                                        <button type="button" class="flat-button" onclick="location.href='#'">Shop</button>
+                                    </div>
+                                    <div class="start-review float-right">
+                                        <span class="flat-start">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <a href="#" class="review">11 reviewers</a>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h6 class="title"><a href="#">San Angelo Shop</a></h6>
+                                    <p>221B Baker Street, London, UK</p>
+                                    <a href="#" class="heart">
+                                        <i class="ion-android-favorite-outline"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-product">
+                            <div class="tm">RA</div>
+                            <div class="text">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry ...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flat-product">
+                        <div class="featured-product">
+                            <img src="assets/images/services/4.jpg" alt="image">
+                            <div class="time bg-green">Opened</div>
+                            <div class="rate-product">
+                                <div class="link-review clearfix">
+                                    <div class="button-product float-left">
+                                        <button type="button" class="flat-button" onclick="location.href='#'">coffee</button>
+                                    </div>
+                                    <div class="start-review float-right">
+                                        <span class="flat-start">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </span>
+                                        <a href="#" class="review">19 reviewers</a>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h6 class="title"><a href="#">Brownsville Bar</a></h6>
+                                    <p>221B Baker Street, London, UK</p>
+                                    <a href="#" class="heart">
+                                        <i class="ion-android-favorite-outline"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-product">
+                            <div class="tm">TM</div>
+                            <div class="text">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry ...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flat-product">
+                        <div class="featured-product">
+                            <img src="assets/images/services/5.jpg" alt="image">
+                            <div class="time">Closed</div>
+                            <div class="rate-product">
+                                <div class="link-review clearfix">
+                                    <div class="button-product float-left">
+                                        <button type="button" class="flat-button" onclick="location.href='#'">Hotel</button>
+                                    </div>
+                                    <div class="start-review float-right">
+                                        <span class="flat-start">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </span>
+                                        <a href="#" class="review">21 reviewers</a>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h6 class="title"><a href="#">Beaumont Restaurant</a></h6>
+                                    <p>221B Baker Street, London, UK</p>
+                                    <a href="#" class="heart">
+                                        <i class="ion-android-favorite-outline"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-product">
+                            <div class="tm">GM</div>
+                            <div class="text">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry ...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flat-product">
+                        <div class="featured-product">
+                            <img src="assets/images/services/6.jpg" alt="image">
+                            <div class="time">Closed</div>
+                            <div class="rate-product">
+                                <div class="link-review clearfix">
+                                    <div class="button-product float-left">
+                                        <button type="button" class="flat-button" onclick="location.href='#'">drink</button>
+                                    </div>
+                                    <div class="start-review float-right">
+                                        <span class="flat-start">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <a href="#" class="review">27 reviewers</a>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h6 class="title"><a href="#">Corpus Restaurants</a></h6>
+                                    <p>221B Baker Street, London, UK</p>
+                                    <a href="#" class="heart">
+                                        <i class="ion-android-favorite-outline"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-product">
+                            <div class="tm">JD</div>
+                            <div class="text">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry ...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Popular Listings -->
+    <!-- Start Latest News -->
+    <section class="flat-row blog-shortcode">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-section text-center">
+                        <h1 class="title">Latest News</h1>
+                        <div class="sub-title">Some great posts from our creative blog</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <article class="post clearfix">
+                        <div class="featured-post">
+                            <a href="single-listing-ls.html"><img src="assets/images/blog/s1.jpg" alt="image"></a>
+                            <ul class="post-comment">
+                                <li class="date">27</li>
+                                <li class="month">JUL</li>
+                            </ul>
+                        </div>
+                        <div class="content-post">
+                            <ul class="meta-data clearfix">
+                                <li class="category">
+                                    Posted in: <a href="#">Restaurants</a>
+                                </li>
+                                <li> By: <a href="#">John Doe</a></li>
+                            </ul>
+                            <h3 class="title-post">
+                                <a href="single-listing-ls.html">
+                                    Your post title here
+                                </a>
+                            </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry ...</p>
+                            <div class="more-link">
+                                <a href="single-listing-ls.html">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <article class="post clearfix">
+                        <div class="featured-post">
+                            <a href="single-listing-ls.html"><img src="assets/images/blog/s2.jpg" alt="image"></a>
+                            <ul class="post-comment">
+                                <li class="date">21</li>
+                                <li class="month">AUG</li>
+                            </ul>
+                        </div>
+                        <div class="content-post">
+                            <ul class="meta-data clearfix">
+                                <li class="category">
+                                    Posted in: <a href="#">Hotel</a>
+                                </li>
+                                <li> By: <a href="#">Tony Stark</a></li>
+                            </ul>
+                            <h3 class="title-post">
+                                <a href="single-listing-ls.html">
+                                Your post title here
+                                </a>
+                            </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry ...</p>
+                            <div class="more-link">
+                                <a href="single-listing-ls.html">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <article class="post clearfix">
+                        <div class="featured-post">
+                            <a href="single-listing-ls.html"><img src="assets/images/blog/s3.jpg" alt="image"></a>
+                            <ul class="post-comment">
+                                <li class="date">18</li>
+                                <li class="month">SEP</li>
+                            </ul>
+                        </div>
+                        <div class="content-post">
+                            <ul class="meta-data clearfix">
+                                <li class="category">
+                                    Posted in: <a href="#">Tourism</a>
+                                </li>
+                                <li> By: <a href="#">admin</a></li>
+                            </ul>
+                            <h3 class="title-post">
+                                <a href="single-listing-ls.html">
+                                    Your post title here
+                                </a>
+                            </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry ...</p>
+                            <div class="more-link">
+                                <a href="single-listing-ls.html">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Latest News -->
+    <!-- Start Newsletter -->
+    <section class="flat-row v1 bg-theme">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="title-section">
+                        <h2 class="title">Newsletter</h2>
+                        <div class="sub-title">
+                            Subscribe now and receive weekly newsletter with
+                        </div>
+                    </div>
+                    <form id="subscribe-form" class="flat-mailchimp" method="post" action="#" data-mailchimp="true">
+                        <div class="field clearfix" id="subscribe-content">
+                            <p class="wrap-input-email">
+                                <input type="text" tabindex="2" id="subscribe-email" name="subscribe-email" placeholder="Your Email Here">
+                            </p>
+                            <p class="wrap-btn">
+                                <button type="button" id="subscribe-button" class=" subscribe-submit effect-button" title="Subscribe now">SUBSCRIBE</button>
+                            </p>
+                        </div>
+                        <div id="subscribe-msg"></div>
+                    </form>
+                </div>
+                <div class="col-lg-2">
+                    <div class="flat-counter text-center">
+                        <div class="content-counter">
+                            <div class="icon-count">
+                                <i class="ion-android-done-all"></i>
+                            </div>
+                            <div class="name-count">Listings</div>
+                            <div class="numb-count" data-to="3576" data-speed="2000" data-waypoint-active="yes">3576</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="flat-counter text-center">
+                        <div class="content-counter">
+                            <div class="icon-count">
+                                <i class="ion-pricetags"></i>
+                            </div>
+                            <div class="name-count">Categories</div>
+                            <div class="numb-count" data-to="1231" data-speed="2000" data-waypoint-active="yes">1231</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="flat-counter text-center">
+                        <div class="content-counter">
+                            <div class="icon-count">
+                                <i class="ion-ios-people"></i>
+                            </div>
+                            <div class="name-count">Users</div>
+                            <div class="numb-count" data-to="2561" data-speed="2000" data-waypoint-active="yes">2561</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Newsletter -->
+    <!-- Start Footer -->
+    <footer class="footer footer-widgets">
+        <div class="container hidden-sm-down">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="widget widget_text widget_info">
+                        <h5 class="widget-title">Our Company</h5>
+                        <div class="textwidget">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking ...</p>
+                        </div>
+                        <ul class="flat-infomation">
+                            <li><i class="fa fa-map-marker"></i>221B Baker Street, London, UK</li>
+                            <li><i class="fa fa-envelope-o"></i>info@yoursite.com</li>
+                            <li><i class="fa fa-phone"></i>+1 888 888 88 88</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 hidden-md-down">
+                    <div id="nav_menu-2" class="widget widget_nav_menu">
+                        <h5 class="widget-title">About Us</h5>
+                        <div class="wrap-menufooter clearfix">
+                            <ul class="menu">
+                                <li class="menu-item"><a href="#">It is a long established fact that ...</a></li>
+                                <li class="menu-item"><a href="#">It is a long established fact that ...</a></li>
+                                <li class="menu-item"><a href="#">It is a long established fact that ...</a></li>
+                                <li class="menu-item"><a href="#">It is a long established fact that ...</a></li>
+                                <li class="menu-item"><a href="#">It is a long established fact that ...</a></li>
+                                <li class="menu-item"><a href="#">It is a long established fact that ...</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 hidden-md-down">
+                    <div class="widget widget_listing">
+                        <h5 class="widget-title">Popular Listings</h5>
+                        <ul>
+                            <li>
+                                <div class="featured">
+                                    <a href="#" class="effect"><img src="assets/images/flickr/1.jpg" alt="image"></a>
+                                </div>
+                                <div class="info-listing">
+                                    <h6><a href="#">Lincoln Hotel</a></h6>
+                                    <div class="start-review">
+                                            <span class="flat-start">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </span>
+                                        <a href="#" class="review hidden-lg-down">12 Reviews</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="featured">
+                                    <a href="#" class="effect"><img src="assets/images/flickr/2.jpg" alt="image"></a>
+                                </div>
+                                <div class="info-listing">
+                                    <h6><a href="#">French Coffee </a></h6>
+                                    <div class="start-review">
+                                            <span class="flat-start">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-o"></i>
+                                            </span>
+                                        <a href="#" class="review hidden-lg-down">7 Reviews</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="widget widget_contact">
+                        <h5 class="widget-title">Our Gallery</h5>
+                        <ul class="clearfix">
+                            <li>
+                                <div class="thumb">
+                                    <a href="#" class="effect">
+                                        <img src="assets/images/flickr/1.jpg" alt="image">
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumb">
+                                    <a href="#" class="effect">
+                                        <img src="assets/images/flickr/2.jpg" alt="image">
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumb">
+                                    <a href="#" class="effect">
+                                        <img src="assets/images/flickr/3.jpg" alt="image">
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumb">
+                                    <a href="#" class="effect">
+                                        <img src="assets/images/flickr/4.jpg" alt="image">
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumb">
+                                    <a href="#" class="effect">
+                                        <img src="assets/images/flickr/5.jpg" alt="image">
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumb">
+                                    <a href="#" class="effect">
+                                        <img src="assets/images/flickr/6.jpg" alt="image">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="bottom">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="copyright">
+                            <p>© 2018 ListLand. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="social-links float-right">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start Login Modal -->
+    <div class="modal fade flat-popupform" id="popup_login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body text-center clearfix">
+                    <form class="form-login form-listing" action="#" method="post">
+                        <h3 class="title-formlogin">Sign in</h3>
+                        <span class="input-login icon-form">
+                            <input type="text" placeholder="Your Name*" name="email" required="required"><i class="fa fa-user"></i>
+                        </span>
+                        <span class="input-login icon-form">
+                            <input type="text" placeholder="Password*" name="password" required="required"><i class="fa fa-lock"></i>
+                        </span>
+                        <div class="flat-fogot clearfix">
+                           <span class="input-check float-left">
+                                <input type="checkbox" id="rem" name="check" value="0" checked="">
+                                <label for="rem" class="remember">Remember me</label>
+                            </span>
+                            <label class="float-right link-register">
+                                <a href="#">Lost your password?</a>
+                            </label>
+                        </div>
+                        <span class="wrap-button">
+                            <button type="button" id="login-button" class=" login-btn effect-button" title="log in">Sign in</button>
+                        </span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Login Modal -->
+    <!-- Start Register Modal -->
+    <div class="modal fade flat-popupform" id="popup_register">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body text-center clearfix">
+                    <form class="form-login form-listing" action="#" method="post">
+                        <h3 class="title-formlogin">Sign up</h3>
+                        <span class="input-login icon-form">
+                            <input type="text" placeholder="Your Name*" name="name" required="required"><i class="fa fa-user"></i>
+                        </span>
+                        <span class="input-login icon-form">
+                            <input type="text" placeholder="E-mail*" name="email" required="required"><i class="fa fa-envelope-o"></i>
+                        </span>
+                        <span class="input-login icon-form">
+                            <input type="text" placeholder="Password*" name="password" required="required"><i class="fa fa-lock"></i>
+                        </span>
+                        <span class="input-login icon-form">
+                            <input type="text" placeholder="Repeat Password*" name="password" required="required"><i class="fa fa-lock"></i>
+                        </span>
+                        <div class="wrap-button signup">
+                            <button type="button" id="logup-button" class=" login-btn effect-button" title="log in">Sign up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Register Modal -->
+    <!-- Start Back To Top -->
+    <a class="go-top effect-button">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- End Back To Top -->
+</div>
+<!-- Plugins JS -->
+<script src="assets/javascript/jquery.min.js"></script>
+<script src="assets/javascript/tether.min.js"></script>
+<script src="assets/javascript/bootstrap.min.js"></script>
+<script src="assets/javascript/jquery.easing.js"></script>
+<script src="assets/javascript/jquery-waypoints.js"></script>
+<script src="assets/javascript/jquery-countTo.js"></script>
+<script src="assets/javascript/owl.carousel.js"></script>
+<script src="assets/javascript/jquery.cookie.js"></script>
+<script src="assets/javascript/parallax.js"></script>
+<script src="assets/javascript/bootstrap-slider.min.js"></script>
+<script src="assets/javascript/smoothscroll.js"></script>
+<!-- Main JS -->
+<script src="assets/javascript/main.js"></script>
+<!-- Revolution JS -->
+<script src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="assets/revolution/js/slider.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+</body>
+</html>
