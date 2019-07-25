@@ -2,14 +2,14 @@
 
 one:
   name: MyString
-  domain_name: MyString
+  domain_name: coursdetheatremarseille.com
   meta_title: MyString
   meta_description: MyText
   banner: MyString
   title: MyString
   description: MyText
   active: false
-  analytics_id: MyString
+  analytics: MyString
 
 two:
   name: MyString
@@ -20,4 +20,4 @@ two:
   title: MyString
   description: MyText
   active: false
-  analytics_id: MyString
+  analytics: MyString
