@@ -20,4 +20,5 @@ class SitesController < ApplicationController
     match = /(coursdetheatre)(\w+)/.match(@domain_name)
     match[2]
   end
+    helper_method :find_city_name_in_url
 end
