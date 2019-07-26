@@ -1,5 +1,7 @@
 {
   "name": "courses_imparato_io",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
 }
