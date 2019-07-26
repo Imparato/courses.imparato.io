@@ -10,6 +10,7 @@ class SitesController < ApplicationController
     @cross_pages = CrossPage.where(site: @site, active: true)
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
     :autolink => true, :space_after_headers => true)
+    @description = @markdown.render("This is *bongos*, indeed.").html_safe
   end
 
   def retrieve_site_url
