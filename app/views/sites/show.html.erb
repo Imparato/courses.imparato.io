@@ -6,40 +6,25 @@
 
 <%= render 'shared/banner' %>
 
-
-<!-- <div class="btn btn-primary">Olla</div>
-
-
-
-<h1>
-  "hello"
-</h1>
-<p><%= request.original_url %></p>
+<!-- <p><%= request.original_url %></p>
 <p><%= request.fullpath %></p>
 
-<% @cross_pages.each do |cross_page| %>
-  <%= link_to cross_page.tags.first.name.capitalize, "#{cross_page.slug}" %>
-<% end %>
-
-<p><%= @city %></p>
 <% @companies.each do |company| %>
 <p><%= company.name %></p>
 <% end %>
 
 
-<%= @markdown.render("This is *bongos*, indeed.").html_safe %>
+<%= @markdown.render("This is *bongos*, indeed.").html_safe %> -->
 
- -->
 <div class="container">
-  <div class="title">Trouvez la troupe qui vous correspond
-  </div>
+  <div class="title">Trouvez la troupe qui vous correspond</div>
     <div class="cards">
-      <% Tag.all.each do |tag|  %>
-        <%= link_to("#{tag.name}") do %>
+      <% @cross_pages.each do |cross_page| %>
+        <%= link_to "#{cross_page.slug}" do %>
           <div class="card-category">
-             <%= tag.name.capitalize %>
+             <%= cross_page.tags.first.name.capitalize %>
           </div>
-       <% end %>
+        <% end %>
       <% end %>
     </div>
 </div>
