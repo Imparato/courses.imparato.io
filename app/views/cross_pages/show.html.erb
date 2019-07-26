@@ -4,12 +4,17 @@
   <meta name="description" content= "<%= @cross_page.meta_description %>">
 <% end %>
 
-<%= render 'shared/banner' %>
+<!-- banner -->
+<!-- <div class="banner"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @cross_page.banner%>')"> -->
+  <div class="banner">
+  <div class="container">
+    <h1><%= @cross_page.title %></h1>
+    <p><%= @cross_page.description %></p>
+  </div>
+</div>
 
-
-hello
-
-<%= @cross_page.title %>
 
 <% @companies.each do |company| %>
   <%= company.name %>
