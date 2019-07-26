@@ -19,8 +19,10 @@ gem "uglifier", ">= 1.3.0"
 # gem 'mini_racer', platforms: :ruby
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem "font-awesome-sass", "~> 5.6.1"
 gem "jbuilder", "~> 2.5"
 gem "simple_form"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
