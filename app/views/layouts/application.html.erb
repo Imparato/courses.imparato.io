@@ -2,6 +2,7 @@
 <html>
   <head>
     <%= content_for?(:meta) ? yield(:meta) : yield %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap" rel="stylesheet">
@@ -15,5 +16,6 @@
     <div id="section">
       <%= yield %>
     </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>
