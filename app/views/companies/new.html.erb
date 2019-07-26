@@ -4,12 +4,18 @@
   <meta name="description" content= "<%= @site.meta_description %>">
 <% end %>
 
-
-<%= simple_form_for @company do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :mail %>
-  <%= f.input :description %>
-  <%= f.association :tags, as: :check_boxes %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <div>
+    <h2 class="contact-title">Proposez votre école/compagnie :</h2>
+  </div>
+  <div class="form-group col-sm-8 offset-sm-2 col-xs-12">
+    <%= simple_form_for @company do |f| %>
+      <%= f.input :name, placeholder: 'Nom :', label:  false %>
+      <%= f.input :address, placeholder: 'Adresse :', label:  false %>
+      <%= f.input :mail, placeholder: 'Email :', label:  false %>
+      <%= f.input :description, placeholder: 'Descriptions, horaires, tarifs, etc... :', as: :text, label:  false %>
+      <%= f.association :tags, as: :check_boxes %>
+      <%= f.button :submit, "Envoyer", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

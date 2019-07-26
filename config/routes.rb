@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'contact/new'
+  get 'contact', to: 'contact#new'
   get 'contact/create'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

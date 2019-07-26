@@ -4,11 +4,17 @@
   <meta name="description" content= "<%= @site.meta_description %>">
 <% end %>
 
-
-<%= simple_form_for @contact do |f| %>
-  <%= f.input :user %>
-  <%= f.input :user_info %>
-  <%= f.input :email %>
-  <%= f.input :body %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <div>
+    <h2 class="contact-title">Contactez nous :</h2>
+  </div>
+  <div class="form-group col-sm-8 offset-sm-2 col-xs-12">
+    <%= simple_form_for @contact do |f| %>
+      <%= f.input :user, placeholder: 'Nom :', label:  false %>
+      <%= f.input :user_info, placeholder: ' ???', label:  false %>
+      <%= f.input :email, placeholder: 'Email :', label:  false %>
+      <%= f.input :body, placeholder: 'Message :', as: :text, label:  false %>
+      <%= f.button :submit, "Envoyer", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

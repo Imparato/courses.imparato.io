@@ -1,23 +1,51 @@
 #section {
   min-height: calc(100vh - 100px); /* Hauteur totale - (Hauteur navbar + Hauteur footer) */
 }
+.logo-icon{
+  font-size: 36px;
+  color: #3C81FF;
+  margin: 0px;
+}
+body {
 
+  font-family: 'Libre Baskerville', serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-@media (max-width: 960px) {
-  /* For a screen < 960px, this CSS will be read */
-  .container-content {
-    width: 700px;
+/* Mobile Styles */
+@media screen and (max-width: 680px) {
+  body {
+    background-color: #AB12DC; /* Red */
+
+  }
+  .title {
+    font-size: 24px;
+  }
+  .card-category {
+    height: 90px;
+    font-size: 16px;
+
+}
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 681px) and (max-width: 960px) {
+  body {
+    background-color: #F8F9FA;
   }
 }
-@media (max-width: 720px) {
-  /* For a screen < 720px, this CSS will be read */
-  .container-content {
-    width: 500px;
-  }
-}
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
-  .container-content {
-    width: 300px;
+
+/* Desktop Styles */
+@media screen and (min-width: 961px) {
+  body {
+    background-color: #F7F7F7;
+    //background-color: #F6F8FA;
+    //background-color: #F8F9FA;
+    //background-color: #F3F9FB;
+    //background-color: #FDFDF6; //blue
   }
 }
