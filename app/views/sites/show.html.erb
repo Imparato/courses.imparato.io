@@ -4,7 +4,7 @@
   <meta name="description" content= "<%= @site.meta_description %>">
 <% end %>
 
-<div class="btn btn-primary">Olla</div>
+<!-- <div class="btn btn-primary">Olla</div>
 
 
 <h1>
@@ -26,3 +26,15 @@
 <%= link_to "Contact an admin ", new_contact_path %>
 <%= @markdown.render("This is *bongos*, indeed.").html_safe %>
 
+ -->
+<div class="container">
+  <div class="title">Trouvez la troupe qui vous correspond</div>
+  <div class="cards">
+    <% Tag.all.each do |tag|  %>
+      <div class="card-category" style="background-image: linear-gradient(#141E30, #243B55, #141E30">
+      <%= tag.name.capitalize %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
