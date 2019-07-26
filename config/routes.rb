@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get '/', to: 'sites#show'
+  root to: 'sites#show'
   get '/:slug', to: 'cross_pages#show'
   resources :companies, only: [:new, :create]
   resources :contacts, only: [:new, :create]
