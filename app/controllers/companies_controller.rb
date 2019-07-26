@@ -19,7 +19,6 @@ class CompaniesController < ApplicationController
         @company.tags << tag
       end
     end
-    @company.site = @site
     if @company.save
       redirect_to "/"
     else
@@ -30,6 +29,6 @@ class CompaniesController < ApplicationController
   private
 
   def company_params_require
-    params.require(:company).permit(:name, :address, :mail, :description, :tags, :active)
+    params.require(:company).permit(:name, :address, :mail, :description, :tags, :active, :picture)
   end
 end

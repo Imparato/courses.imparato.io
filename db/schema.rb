@@ -60,25 +60,6 @@ ActiveRecord::Schema.define(version: 2019_07_17_102505) do
     t.bigint "tag_id", null: false
   end
 
-  create_table "company_creations", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.string "mail"
-    t.text "description"
-    t.string "city"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "contact_admins", force: :cascade do |t|
-    t.string "user"
-    t.string "contact"
-    t.string "object"
-    t.text "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "contacts", force: :cascade do |t|
     t.string "user"
     t.string "user_info"

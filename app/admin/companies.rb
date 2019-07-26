@@ -2,7 +2,7 @@
 
 ActiveAdmin.register Company do
   permit_params do
-    permitted = [:name, :address, :active, :mail, :description, :lat, :lng, :site_id, tag_ids: []]
+    permitted = [:name, :address, :picture, :active, :mail, :description, :lat, :lng, :site_id, tag_ids: []]
     permitted << :other if params[:action] == "create" && current_admin_user
     permitted
   end
@@ -11,6 +11,7 @@ ActiveAdmin.register Company do
     selectable_column
     id_column
     column :site
+    column :picture
     column :name
     column :address
     column :description
@@ -28,6 +29,7 @@ ActiveAdmin.register Company do
     attributes_table do
       row :site
       row :name
+      row :picture
       row :address
       row :description
       row :mail
@@ -39,8 +41,9 @@ ActiveAdmin.register Company do
   end
 
   form do |f|
-    f.inputs "Add/Edit Article" do
+    f.inputs "Add/Edit Company" do
       f.input :site
+      f.input :picture
       f.input :name
       f.input :address
       f.input :description
