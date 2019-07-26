@@ -2,7 +2,7 @@
 
 ActiveAdmin.register Company do
   permit_params do
-    permitted = [:name, :address, :picture, :active, :mail, :description, :lat, :lng, :site_id, tag_ids: []]
+    permitted = [:name, :address, :active, :mail, :description, :lat, :lng, :site_id, tag_ids: []]
     permitted << :other if params[:action] == "create" && current_admin_user
     permitted
   end
@@ -43,7 +43,6 @@ ActiveAdmin.register Company do
   form do |f|
     f.inputs "Add/Edit Company" do
       f.input :site
-      f.input :picture
       f.input :name
       f.input :address
       f.input :description

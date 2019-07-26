@@ -33,7 +33,7 @@
   </div>
 
 
-<% @companies.last(5).each do |company| %>
+<% @companies.where(active: true).last(5).each do |company| %>
   <div class="card-product">
     <%= image_tag("theatre#{company.id % 5}") %>
     <div class="card-product-infos">
