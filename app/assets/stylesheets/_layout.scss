@@ -1,11 +1,7 @@
 #section {
   min-height: calc(100vh - 100px); /* Hauteur totale - (Hauteur navbar + Hauteur footer) */
 }
-.logo-icon{
-  font-size: 36px;
-  color: #3C81FF;
-  margin: 0px;
-}
+
 body {
 
   font-family: 'Libre Baskerville', serif;
@@ -19,5 +15,16 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+}
+p {
+  font-size: 16px;
+}
+h1{
+  font-size: 32px;
+}
+h2{
+  font-size: 24px;
+}
+h3{
+  font-size: 20px;
 }
