@@ -13,6 +13,7 @@ class CompaniesController < ApplicationController
 
   def create
     @company = Company.new(company_params_require)
+    @company.site = @site
     params[:company][:tag_ids].each do |tag_id|
       unless tag_id == ""
         tag = Tag.find(tag_id)
@@ -29,6 +30,6 @@ class CompaniesController < ApplicationController
   private
 
   def company_params_require
-    params.require(:company).permit(:name, :address, :mail, :description, :tags, :active, :picture)
+    params.require(:company).permit(:name, :address, :mail, :description, :tags, :active)
   end
 end

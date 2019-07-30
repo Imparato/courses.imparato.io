@@ -36,6 +36,7 @@ tetard = Company.create!(
   La formation dure, en effet, une année et s’effectue en plusieurs étapes allant
   de l’initiation jusqu’à l’approfondissement.",
   site:        coursamarseille,
+  active: "true",
 )
 
 roche = Company.create!(
@@ -44,6 +45,7 @@ roche = Company.create!(
   mail:        "mail@gmail.com",
   description: "Ecole Sylvia Roche est un établissement dédié à l’art dramatique. L’équipe propose une formation qui dure trois années, des stages ainsi que des ateliers. Les adultes peuvent s’y inscrire pour suivre les cours complets.",
   site:        coursamarseille,
+  active:      "true",
 )
 
 merlan = Company.create!(
@@ -52,6 +54,7 @@ merlan = Company.create!(
   mail:        "mail@gmail.com",
   description: "Petite salle avec une scène en damier noir et blanc dédiée à la comédie, avec cours de théâtre pour tout âge. L’excellente Danièle De Cesare y prodigue, les lundis et mardis, un cours d’une rare qualité.",
   site:        coursamarseille,
+  active:      "true",
 )
 
 divadlo = Company.create!(
@@ -60,6 +63,7 @@ divadlo = Company.create!(
   mail:        "mail@gmail.com",
   description: "L’établissement organise une formation à la pratique théâtrale pour les adultes et enfants. Les cours sont accessibles à tous les niveaux allant des débutants jusqu’aux avancés.",
   site:        coursamarseille,
+  active:      "true",
 )
 
 orchestra = Company.create!(
@@ -68,6 +72,7 @@ orchestra = Company.create!(
   mail:        "mail@gmail.com",
   description: "L’Orchestra Studio est une bonne adresse pour suivre des cours de création. Vous pouvez aussi vous y souscrire pour participer à cours de danse ou de théâtre. Il s’agit également d’un établissement dédié aux stages pour les tout-petits, marmots et adultes. A noter la présence de l’excellente Marion Marion Nguyen Thé, Comédienne et chanteuse, qui dispense les cours de Théâtre. Depuis cette année, Orchestra-Pro propose une formation professionnalisante sur 2 ans pour former aux métiers de la scène, du chant, du théâtre etc etc ..",
   site:        coursamarseille,
+  active:      "true",
 )
 
 cours = Company.create!(
@@ -76,6 +81,7 @@ cours = Company.create!(
   mail:        "mail@gmail.com",
   description: "Enfants, adolescents et adultes y sont les bienvenus pour suivre des cours assurés par une équipe des professeurs chevronnés. Des stages, ateliers et cours de chant y sont également organisés.",
   site:        coursamarseille,
+  active:      "true",
 )
 
 puts "Creating CrossPages"
