@@ -1,5 +1,4 @@
 .banner {
-  background-image: url(asset-path("photo_marseille.jpeg"));
   background-size: cover;
   background-position: center;
   padding: 150px 0;
@@ -7,19 +6,27 @@
 
 }
 
+//data-fontsize="['65','65','45','30']"
+//data-lineheight="['65','65','45','35']"
 .banner h1 {
-  margin: 0;
+  margin: 0px 0px 40px 0px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
   font-size: 32px;
   font-weight: bold;
+  text-align: center;
 }
 
+//data-fontsize="['20',20','20','14']"
+//data-lineheight="['35','35','35','20']"
 .banner p {
   font-size: 20px;
+  line-height: 35px;
+  font-weight: 300;
   color: white;
   opacity: .9;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+
 }
 
 

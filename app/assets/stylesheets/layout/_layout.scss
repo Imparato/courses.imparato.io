@@ -1,0 +1,64 @@
+#section {
+  min-height: calc(100vh - 100px); /* Hauteur totale - (Hauteur navbar + Hauteur footer) */
+}
+
+body {
+
+  font-family: 'Libre Baskerville', serif;
+  background-color: #F7F7F7;
+  //background-color: #F6F8FA;
+  //background-color: #F8F9FA;
+  //background-color: #F3F9FB;
+  //background-color: #FDFDF6; //blue
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  font-size: 16px;
+  margin: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Nunito", sans-serif;
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 60px;
+    line-height: 60px;
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 35px;
+}
+
+h3 {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+h4 {
+    font-size: 25px;
+    line-height: 25px;
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 16px;
+}
+a{
+  text-decoration: none;
+
+  &:hover{
+    text-decoration:none;
+  }
+}

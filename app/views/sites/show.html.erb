@@ -8,17 +8,63 @@
 <!-- <div class="banner"
   style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
          url('<%= cl_image_path @site.banner%>')"> -->
-  <div class="banner">
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url('assets/photo_marseille.jpeg');">
   <div class="container">
     <h1><%= @site.title %></h1>
     <p><%= @site.description %></p>
   </div>
 </div>
 
-<!-- cards for cross-pages -->
-<div class="container">
-  <h2 class="">Trouvez la troupe qui vous correspond</h2>
-    <div class="cards">
+<div class="page-section-container background-white">
+  <div class="container">
+    <h2 class="sub-title">Trouvez la troupe qui vous correspond</h2>
+    <!-- cards for cross-pages -->
+    <div class="cards-container">
+      <% @cross_pages.each do |cross_page| %>
+          <%= link_to "#{cross_page.slug}" do %>
+            <div class="card-container">
+               <p><%= cross_page.tags.first.name.upcase %><p>
+            </div>
+          <% end %>
+        <% end %>
+    </div>
+  </div>
+</div>
+
+  <div class="page-section-container">
+    <div class="container">
+    <h2 class="sub-title"> Ils font du théâtre à <%= find_city_name_in_url.capitalize %>
+    </h2>
+    <!-- cards for compagnies -->
+    <% @companies.where(active: true).last(5).each do |company| %>
+      <div class="card-company">
+        <%= image_tag("theatre#{company.id % 5}") %>
+        <div class="card-company-info">
+          <div class="card-company-tags">
+            <% company.tags.each do |tag| %>
+              <div class="company-tag">
+                <%= tag.name.capitalize %>
+              </div>
+            <% end %>
+          </div>
+          <h3 class="company-name"><%= company.name %></h3>
+          <p><%= company.description %></p>
+          <div>
+            <p class="info-contact"><span><i class="fas fa-map-marker-alt"></i> <%= company.address %></span></p>
+            <p class="info-contact"><span><i class="fas fa-envelope"></i> <%= company.mail %></span>
+            <span><i class="fas fa-phone"></i> 06 09 73 67 23</span>
+            <span><i class="fas fa-globe"></i>
+              <%= link_to "https://theatresurcours.com", "https://theatresurcours.com" %></span></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+    <!-- <div class="cards">
       <% @cross_pages.each do |cross_page| %>
         <%= link_to "#{cross_page.slug}" do %>
           <div class="card-category">
@@ -26,13 +72,7 @@
           </div>
         <% end %>
       <% end %>
-    </div>
-
-<!-- cards for compagnies -->
-<h2 class=""> Ils font du théâtre à <%= find_city_name_in_url.capitalize %>
-</h2>
-
-
+    </div> -->
 <!--
 <div class="title subtitle"> Ils font du théâtre à <%= find_city_name_in_url.capitalize %>
   </div>
@@ -53,29 +93,6 @@
   </div>
 <% end %> -->
 
-<% @companies.where(active: true).last(5).each do |company| %>
-  <div class="card-company">
-    <%= image_tag("theatre#{company.id % 5}") %>
-    <div class="card-company-info">
-      <div class="card-company-tags">
-        <% company.tags.each do |tag| %>
-          <div class="company-tag">
-            <%= tag.name.capitalize %>
-          </div>
-        <% end %>
-      </div>
-      <h3 class="company-name"><%= company.name %></h3>
-      <p><%= company.description %></p>
-      <div>
-        <p class="info-contact"><span><i class="fas fa-map-marker-alt"></i> <%= company.address %></span></p>
-        <p class="info-contact"><span><i class="fas fa-envelope"></i> <%= company.mail %></span>
-        <span><i class="fas fa-phone"></i> 06 09 73 67 23</span>
-        <span><i class="fas fa-globe"></i>
-          <%= link_to "https://theatresurcours.com", "https://theatresurcours.com" %></span></p>
-      </div>
-    </div>
-  </div>
-<% end %>
 
-</div>
+
 

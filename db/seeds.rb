@@ -17,7 +17,7 @@ coursamarseille = Site.create!(
   meta_title:       "Trouvez les meilleurs cours à Marseille",
   meta_description: "meta_description à remplir",
   banner:           File.new(File.join(Rails.root, "/app/assets/images/photo_marseille.jpeg")),
-  title:            "Souhaitez-vous vous afficher sous les projecteurs, notamment devant la caméra pour faire valoir vos talents en voix ou tragédies ?",
+  title:            "Souhaitez-vous vous afficher sous les projecteurs?",
   description:      "L’art théâtral est une activité accessible à tous ses adeptes. Il fait partie des principales sources de divertissement, rien que pour se débarrasser complètement du stress et retrouver la confiance en soi. Sans doute que les cours de théâtre sont de réelles occasions permettant aux participants de jouer sur leurs sentiments, d’apprendre à parler à haute voix, de pleurer ou de rire en toute liberté…",
   active:           "true",
   analytics:        "2",
