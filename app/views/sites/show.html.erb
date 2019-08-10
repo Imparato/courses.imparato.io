@@ -39,24 +39,23 @@
   <!-- cards for compagnies -->
   <% @companies.where(active: true).last(5).each do |company| %>
     <div class="both-sides">
-    <div class="left-side">
-    <div class="card-company">
-      <%= image_tag("theatre#{company.id % 5}") %>
-      <!-- <div class="card-company-info"> -->
-        <div class="card-company-tags">
-          <% company.tags.each do |tag| %>
-            <div class="company-tag">
-              <%= tag.name.capitalize %>
-            </div>
-          <% end %>
+      <div class="left-side">
+        <div class="card-company">
+          <%= image_tag("theatre#{company.id % 5}") %>
+          <!-- <div class="card-company-info"> -->
+          <div class="card-company-tags">
+            <% company.tags.each do |tag| %>
+              <div class="company-tag">
+                <%= tag.name.capitalize %>
+              </div>
+            <% end %>
+          </div>
         </div>
-        </div>
-            </div>
-                      <div class="right-side">
-            <div class="card-company-info">
-
-        <h3 class="company-name"><%= company.name %></h3>
-        <p class="company-description"><%= company.description %></p>
+      </div>
+      <div class="right-side">
+        <div class="card-company-info">
+          <h3 class="company-name"><%= company.name %></h3>
+          <p class="company-description"><%= company.description %></p>
         <div>
           <p class="info-contact">
             <span>
@@ -79,9 +78,9 @@
             </span>
           </p>
         </div>
+        </div>
       </div>
-    </div>
   <% end %>
-</div>
+  </div>
 </div>
 
