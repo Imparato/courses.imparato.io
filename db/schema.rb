@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_26_134141) do
+ActiveRecord::Schema.define(version: 2019_08_09_084222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,25 +61,6 @@ ActiveRecord::Schema.define(version: 2019_07_26_134141) do
     t.bigint "tag_id", null: false
   end
 
-  create_table "company_creations", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.string "mail"
-    t.text "description"
-    t.string "city"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "contact_admins", force: :cascade do |t|
-    t.string "user"
-    t.string "contact"
-    t.string "object"
-    t.text "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "contacts", force: :cascade do |t|
     t.string "user"
     t.string "user_info"
@@ -126,6 +107,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_134141) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "order"
   end
 
   add_foreign_key "companies", "sites"
