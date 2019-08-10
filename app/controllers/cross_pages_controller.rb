@@ -10,7 +10,7 @@ class CrossPagesController < ApplicationController
     site = @cross_page.site
     companies = site.companies
     @companies = companies.select { |company| company.tags.include?(@cross_page.tags.first) }
-    @companies = companies.select { |company| company.active == true }
+    @companies = @companies.select { |company| company.active == true }
   end
 
   private

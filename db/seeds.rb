@@ -139,7 +139,7 @@ marseillemardi.remote_banner_url = url
 marseillemardi.save!
 
 marseillemercredi = CrossPage.new(
-  slug:             "cours de theatre mercredi",
+  slug:             "cours-de-theatre-mercredi",
   title:            "Cours d'improvisation à Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
   active:           "true",
@@ -151,7 +151,7 @@ marseillemercredi.remote_banner_url = url
 marseillemercredi.save!
 
 marseillejeudi = CrossPage.new(
-  slug:             "impro-a-marseille",
+  slug:             "cours-a-marseille-jeudi",
   title:            "Cours d'improvisation à Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
   active:           "false",
@@ -163,7 +163,7 @@ marseillejeudi.remote_banner_url = url
 marseillejeudi.save!
 
 marseillevendredi = CrossPage.new(
-  slug:             "impro-a-marseille",
+  slug:             "vendredi-a-marseille",
   title:            "Cours d'improvisation à Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
   banner:           File.new(File.join(Rails.root, "/app/assets/images/photo_marseille.jpeg")),
@@ -176,7 +176,7 @@ marseillevendredi.remote_banner_url = url
 marseillevendredi.save!
 
 marseilleweekend = CrossPage.new(
-  slug:             "impro-a-marseille",
+  slug:             "weekend-a-marseille",
   title:            "Cours d'improvisation à Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
   active:           "true",
