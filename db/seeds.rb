@@ -189,14 +189,14 @@ marseilleweekend.save!
 
 puts "Creating tags"
 
-lundi = Tag.create!(name: "lundi", order: 1)
-mardi = Tag.create!(name: "mardi", order: 2)
-mercredi = Tag.create!(name: "mercredi", order: 3)
-jeudi = Tag.create!(name: "jeudi", order: 4)
-vendredi = Tag.create!(name: "vendredi", order: 5)
-week_end = Tag.create!(name: "week end", order: 6)
-theatre = Tag.create!(name: "théâtre", order: 7)
-impro = Tag.create!(name: "impro", order: 8)
+theatre = Tag.create!(name: "théâtre", order: 1)
+impro = Tag.create!(name: "impro", order: 2)
+lundi = Tag.create!(name: "lundi", order: 3)
+mardi = Tag.create!(name: "mardi", order: 4)
+mercredi = Tag.create!(name: "mercredi", order: 5)
+jeudi = Tag.create!(name: "jeudi", order: 6)
+vendredi = Tag.create!(name: "vendredi", order: 7)
+week_end = Tag.create!(name: "week end", order: 8)
 
 puts "Adding tags to existing companies and crosspages"
 

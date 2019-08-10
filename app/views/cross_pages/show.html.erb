@@ -22,7 +22,7 @@
       <%= image_tag("theatre#{company.id % 5}") %>
       <div class="card-company-info">
         <div class="card-company-tags">
-          <% company.tags.each do |tag| %>
+          <% company.tags.sort_by{|tag| tag.order}.each do |tag| %>
             <% if tag != @cross_page.tags.first %>
               <div class="company-tag">
             <% else %>
