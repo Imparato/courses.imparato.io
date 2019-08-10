@@ -8,9 +8,9 @@ class SitesController < ApplicationController
     @site = Site.find_by(domain_name: @domain_name)
     @companies = Company.where(site: @site)
     @cross_pages = CrossPage.where(site: @site, active: true)
-    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
     :autolink => true, :space_after_headers => true)
-    @description = @markdown.render("This is *bongos*, indeed.").html_safe
+    @description = markdown.render("This is *bongos*, indeed.").html_safe
   end
 
   def retrieve_site_url

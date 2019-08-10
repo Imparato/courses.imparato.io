@@ -4,15 +4,15 @@
 <meta name="description" content= "<%= @site.meta_description %>">
 <% end %>
 <!-- banner -->
-<!-- <div class="banner"
-  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-  url('<%= cl_image_path @site.banner%>')"> -->
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url('assets/photo_marseille.jpeg');">
-    <div class="container">
-      <h1><%= @site.title %></h1>
-      <p><%= @site.description %></p>
-    </div>
+<div class="banner"
+  style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)),
+         url('<%= cl_image_path @site.banner%>')">
+  <div class="container">
+    <h1><%= @site.title %></h1>
+    <p><%= @site.description %></p>
   </div>
+</div>
+
   <div class="page-section-container background-white">
     <div class="container">
       <h2 class="sub-title">Trouvez la troupe qui vous correspond</h2>
@@ -63,6 +63,7 @@
           <% end %>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
     <!-- <div class="cards">
       <% @cross_pages.each do |cross_page| %>
@@ -89,3 +90,12 @@
       </div>
     </div>
     <% end %> -->
+=======
+    <% end %>
+  </div>
+</div>
+
+
+
+
+>>>>>>> 273b30436cda5475d88df319b04eadbd91037f01
