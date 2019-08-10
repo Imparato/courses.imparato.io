@@ -2,7 +2,7 @@
 
 ActiveAdmin.register Company do
   permit_params do
-    permitted = [:name, :address, :active, :mail, :description, :lat, :lng, :site_id, tag_ids: []]
+    permitted = [:name, :address, :active, :mail, :phone, :website, :description, :lat, :lng, :site_id, tag_ids: []]
     permitted << :other if params[:action] == "create" && current_admin_user
     permitted
   end
@@ -16,6 +16,8 @@ ActiveAdmin.register Company do
     column :address
     column :description
     column :mail
+    column :phone
+    column :website
     column :active
     column :tags do |company|
       company.tags.order("name ASC") do
@@ -33,6 +35,8 @@ ActiveAdmin.register Company do
       row :address
       row :description
       row :mail
+      row :phone
+      row :website
       row :active
       attributes_table_for company do
         row :tags
@@ -47,6 +51,8 @@ ActiveAdmin.register Company do
       f.input :address
       f.input :description
       f.input :mail
+      f.input :phone
+      f.input :website
       f.input :lat
       f.input :lng
       f.input :tags, as: :check_boxes
