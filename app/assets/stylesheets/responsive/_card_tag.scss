@@ -1,0 +1,41 @@
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .card-container {
+    height: 100px;
+  }
+  .card-container:hover{
+    font-size: 20px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .card-container {
+    height: 100px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .card-container {
+    height: 120px;
+  }
+  .card-container:hover{
+    font-size: 20px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .card-container{
+    height: 150px;
+  }
+  .card-container:hover{
+    font-size: 34px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}

@@ -1,36 +1,19 @@
 .banner {
-
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
   opacity: 0.8;
 }
 
 .banner h1 {
-  margin: 0;
   color: white;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-  font-size: 32px;
   font-weight: bold;
   letter-spacing: 0.1em;
 }
 
 .banner p {
-  font-size: 16px;
+  font-size: 20px;
   color: white;
   font-weight: 600;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-}
-
-
-@media (max-width: 1250px)
-{
-  .banner h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .banner p {
-    text-align: center;
-  }
 }
