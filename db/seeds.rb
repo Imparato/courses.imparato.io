@@ -11,17 +11,19 @@ puts "AdminUser created, creating seeds"
 
 puts "creating coursamarseille as a site"
 
-coursamarseille = Site.create!(
+coursamarseille = Site.new(
   domain_name:      "coursdetheatremarseille.com",
   name:             "Cours de théâtre à Marseille",
   meta_title:       "Trouvez les meilleurs cours à Marseille",
   meta_description: "meta_description à remplir",
-  banner:           File.new(File.join(Rails.root, "/app/assets/images/photo_marseille.jpeg")),
   title:            "Souhaitez-vous vous afficher sous les projecteurs?",
   description:      "L’art théâtral est une activité accessible à tous ses adeptes. Il fait partie des principales sources de divertissement, rien que pour se débarrasser complètement du stress et retrouver la confiance en soi. Sans doute que les cours de théâtre sont de réelles occasions permettant aux participants de jouer sur leurs sentiments, d’apprendre à parler à haute voix, de pleurer ou de rire en toute liberté…",
   active:           "true",
   analytics:        "2",
 )
+url = "https://images.unsplash.com/photo-1560895517-08bdabc9c17a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80"
+coursamarseille.remote_banner_url = url
+coursamarseille.save!
 
 puts "Creating Companies"
 
@@ -85,69 +87,82 @@ cours = Company.create!(
 )
 
 puts "Creating CrossPages"
+url = "https://images.unsplash.com/photo-1544391641-ccb92906e11c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
 
-marseilleimpro = CrossPage.create!(
+marseilleimpro = CrossPage.new(
   slug:             "impro-a-marseille",
   title:            "Cours d'improvisation à Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
-  banner:           File.new(File.join(Rails.root, "/app/assets/images/photo_marseille.jpeg")),
   active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
   site:             coursamarseille,
 )
-marseilletheatre = CrossPage.create!(
+marseilleimpro.remote_banner_url = url
+marseilleimpro.save!
+
+marseilletheatre = CrossPage.new(
   slug:             "theatre-a-marseille",
   title:            "Cours d'improvisation à Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
-  banner:           File.new(File.join(Rails.root, "/app/assets/images/photo_marseille.jpeg")),
   active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
   site:             coursamarseille,
 )
 
-marseillelundi = CrossPage.create!(
+marseilletheatre.remote_banner_url = url
+marseilletheatre.save!
+
+marseillelundi = CrossPage.new(
   slug:             "lundi-a-marseille",
   title:            "Cours d'improvisation sur Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
-  banner:           File.new(File.join(Rails.root, "/app/assets/images/photo_marseille.jpeg")),
   active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
   site:             coursamarseille,
 )
-marseillemardi = CrossPage.create!(
+marseillelundi.remote_banner_url = url
+marseillelundi.save!
+
+marseillemardi = CrossPage.new(
   slug:             "cours-de-theatre-mardi",
   title:            "Cours d'improvisation à Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
-  banner:           File.new(File.join(Rails.root, "/app/assets/images/photo_marseille.jpeg")),
   active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
   site:             coursamarseille,
 )
-marseillemercredi = CrossPage.create!(
+marseillemardi.remote_banner_url = url
+marseillemardi.save!
+
+marseillemercredi = CrossPage.new(
   slug:             "cours de theatre mercredi",
   title:            "Cours d'improvisation à Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
-  banner:           File.new(File.join(Rails.root, "/app/assets/images/photo_marseille.jpeg")),
   active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
   site:             coursamarseille,
 )
-marseillejeudi = CrossPage.create!(
+marseillemercredi.remote_banner_url = url
+marseillemercredi.save!
+
+marseillejeudi = CrossPage.new(
   slug:             "impro-a-marseille",
   title:            "Cours d'improvisation à Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
-  banner:           File.new(File.join(Rails.root, "/app/assets/images/photo_marseille.jpeg")),
   active:           "false",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
   site:             coursamarseille,
 )
-marseillevendredi = CrossPage.create!(
+marseillejeudi.remote_banner_url = url
+marseillejeudi.save!
+
+marseillevendredi = CrossPage.new(
   slug:             "impro-a-marseille",
   title:            "Cours d'improvisation à Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
@@ -157,16 +172,20 @@ marseillevendredi = CrossPage.create!(
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
   site:             coursamarseille,
 )
-marseilleweekend = CrossPage.create!(
+marseillevendredi.remote_banner_url = url
+marseillevendredi.save!
+
+marseilleweekend = CrossPage.new(
   slug:             "impro-a-marseille",
   title:            "Cours d'improvisation à Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
-  banner:           File.new(File.join(Rails.root, "/app/assets/images/photo_marseille.jpeg")),
   active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
   site:             coursamarseille,
 )
+marseilleweekend.remote_banner_url = url
+marseilleweekend.save!
 
 puts "Creating tags"
 
@@ -179,7 +198,7 @@ jeudi = Tag.create!(name: "jeudi")
 vendredi = Tag.create!(name: "vendredi")
 week_end = Tag.create!(name: "week end")
 
-puts "adding tags to existing companies and crosspages"
+puts "Adding tags to existing companies and crosspages"
 
 tetard.tags << lundi
 tetard.tags << jeudi
