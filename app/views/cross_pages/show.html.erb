@@ -18,12 +18,12 @@
 
 <div class="container">
 <% @companies.each do |company| %>
-  <div class="card-company">
     <%= image_tag("theatre#{company.id % 5}") %>
+  <div class="card-company">
     <div class="card-company-info">
       <div class="card-company-tags">
         <% company.tags.each do |tag| %>
-          <% if tag.name != @cross_page.slug %>
+          <% if @cross_page.slug.exclude?(tag.name) %>
             <div class="company-tag">
             <%= tag.name.capitalize %>
             </div>

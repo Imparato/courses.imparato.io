@@ -170,14 +170,14 @@ marseilleweekend = CrossPage.create!(
 
 puts "Creating tags"
 
-theatre = Tag.create!(name: "théâtre")
-impro = Tag.create!(name: "impro")
-lundi = Tag.create!(name: "lundi")
-mardi = Tag.create!(name: "mardi")
-mercredi = Tag.create!(name: "mercredi")
-jeudi = Tag.create!(name: "jeudi")
-vendredi = Tag.create!(name: "vendredi")
-week_end = Tag.create!(name: "week end")
+lundi = Tag.create!(name: "lundi", order: 1)
+mardi = Tag.create!(name: "mardi", order: 2)
+mercredi = Tag.create!(name: "mercredi", order: 3)
+jeudi = Tag.create!(name: "jeudi", order: 4)
+vendredi = Tag.create!(name: "vendredi", order: 5)
+week_end = Tag.create!(name: "week end", order: 6)
+theatre = Tag.create!(name: "théâtre", order: 7)
+impro = Tag.create!(name: "impro", order: 8)
 
 puts "adding tags to existing companies and crosspages"
 

@@ -1,20 +1,27 @@
 .cards-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+
   grid-gap: 16px;
 }
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr ;
+  }
+  .card-container {
+    height: 100px;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cards-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card-container {
+    height: 100px;
   }
 }
 
@@ -22,6 +29,9 @@
 @media (min-width: 768px) {
   .cards-container {
     grid-template-columns: 1fr 1fr;
+  }
+  .card-container {
+    height: 100px;
   }
 }
 
