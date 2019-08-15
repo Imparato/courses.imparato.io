@@ -1,0 +1,39 @@
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner{
+    height: 90vh;
+    padding: 100px 0;
+  }
+  .banner h1{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .banner p{
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .banner{
+    height: 70vh;
+    padding: 120px 0;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .banner{
+    height: 60vh;
+    padding: 150px 0;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

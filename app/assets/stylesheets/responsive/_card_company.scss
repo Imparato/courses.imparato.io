@@ -1,0 +1,43 @@
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .card-company{
+    flex-direction: column;
+  }
+  .card-company img {
+    height: 220px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .card-company{
+    flex-direction: column;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .card-company{
+    flex-direction: row;
+  }
+  .card-company img {
+    height: 230px;
+    width: 40%;
+    margin-bottom: 10px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .card-company img {
+    height: 265px;
+    width: 30%;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}

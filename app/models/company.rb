@@ -3,5 +3,7 @@
 class Company < ApplicationRecord
   belongs_to :site
   has_and_belongs_to_many :tags
-  validates :name, :address, :mail, :description, presence: true
+  validates :name, :address, :description, presence: true
+
+  # need to add validation on at least one field phone, mail or website
 end

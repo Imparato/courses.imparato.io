@@ -13,36 +13,50 @@
     <p><%= @cross_page.description %></p>
   </div>
 </div>
+<!-- end banner -->
 
-
+<!-- company cards section -->
 <div class="container">
-<% @companies.each do |company| %>
-    <%= image_tag("theatre#{company.id % 5}") %>
-  <div class="card-company">
-    <div class="card-company-info">
-      <div class="card-company-tags">
-        <% company.tags.each do |tag| %>
-          <% if @cross_page.slug.exclude?(tag.name) %>
-            <div class="company-tag">
-            <%= tag.name.capitalize %>
-            </div>
-          <% else %>
-            <div class="company-tag active">
-            <%= tag.name.capitalize %>
-            </div>
+  <% @companies.each do |company| %>
+    <div class="card-company">
+      <%= image_tag("theatre#{company.id % 5}") %>
+      <div class="card-company-info">
+        <div class="card-company-tags">
+          <% company.tags.sort_by{|tag| tag.order}.each do |tag| %>
+            <% if tag != @cross_page.tags.first %>
+              <div class="company-tag">
+            <% else %>
+              <div class="company-tag company-tag-active">
+            <% end %>
+                <%= tag.name.capitalize %>
+              </div>
           <% end %>
-        <% end %>
-      </div>
-      <h3 class="company-name"><%= company.name %></h3>
-      <p><%= company.description %></p>
-      <div>
-        <p class="info-contact"><span><i class="fas fa-map-marker-alt"></i> <%= company.address %></span></p>
-        <p class="info-contact"><span><i class="fas fa-envelope"></i> <%= company.mail %></span>
-        <span><i class="fas fa-phone"></i> 06 09 73 67 23</span>
-        <span><i class="fas fa-globe"></i>
-          <%= link_to "https://theatresurcours.com", "https://theatresurcours.com" %></span></p>
+        </div>
+        <h3 class="company-name"><%= company.name %></h3>
+        <p class="company-description"><%= company.description %></p>
+        <div>
+          <p class="info-contact">
+            <span>
+              <i class="fas fa-map-marker-alt color-text-blue"></i>
+              <%= company.address %>
+            </span>
+          </p>
+          <p class="info-contact">
+            <span>
+              <i class="fas fa-envelope color-text-blue"></i>
+              <%= company.mail %>
+            </span>
+            <span>
+              <i class="fas fa-phone color-text-blue"></i>
+               <%= company.phone %>
+            </span>
+            <span>
+              <i class="fas fa-globe color-text-blue"></i>
+               <%= link_to company.website, company.website %>
+            </span>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
 </div>
