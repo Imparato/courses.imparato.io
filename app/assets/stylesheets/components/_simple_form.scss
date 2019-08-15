@@ -1,0 +1,17 @@
+.aligned {
+text-align:center;
+}
+
+
+#contact_body {
+height: 300px;
+}
+#contact_user, #contact_user_info, #contact_email, #contact_body {
+  text-align:center;
+}
+
+.company_tags {
+  display: flex;
+  flex-direction: row;
+}
+

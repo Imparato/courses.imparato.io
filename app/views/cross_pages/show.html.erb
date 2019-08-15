@@ -1,62 +1,62 @@
 <!-- insert meta information of page -->
 <% content_for :meta do %>
-  <title><%= @cross_page.meta_title %></title>
-  <meta name="description" content= "<%= @cross_page.meta_description %>">
+<title><%= @cross_page.meta_title %></title>
+<meta name="description" content= "<%= @cross_page.meta_description %>">
 <% end %>
-
 <!-- banner -->
 <div class="banner"
   style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)),
-         url('<%= cl_image_path @cross_page.banner%>')">
+  url('<%= cl_image_path @cross_page.banner%>')">
   <div class="container">
     <h1><%= @cross_page.title %></h1>
     <p><%= @cross_page.description %></p>
   </div>
 </div>
 <!-- end banner -->
-
 <!-- company cards section -->
 <div class="container">
   <% @companies.each do |company| %>
-    <div class="card-company">
-      <%= image_tag("theatre#{company.id % 5}") %>
-      <div class="card-company-info">
-        <div class="card-company-tags">
-          <% company.tags.sort_by{|tag| tag.order}.each do |tag| %>
-            <% if tag != @cross_page.tags.first %>
+  <div class="card-company">
+    <%= image_tag("theatre#{company.id % 5}") %>
+    <div class="card-company-info">
+      <div class="card-company-tags">
+        <% company.tags.sort_by{|tag| tag.order}.each do |tag| %>
+          <% if tag != @cross_page.tags.first %>
               <div class="company-tag">
+              <%= tag.name.capitalize %>
+              </div>
             <% else %>
               <div class="company-tag company-tag-active">
-            <% end %>
-                <%= tag.name.capitalize %>
+              <%= tag.name.capitalize %>
               </div>
+        <% end %>
           <% end %>
-        </div>
-        <h3 class="company-name"><%= company.name %></h3>
-        <p class="company-description"><%= company.description %></p>
-        <div>
-          <p class="info-contact">
-            <span>
-              <i class="fas fa-map-marker-alt color-text-blue"></i>
-              <%= company.address %>
-            </span>
-          </p>
-          <p class="info-contact">
-            <span>
-              <i class="fas fa-envelope color-text-blue"></i>
-              <%= company.mail %>
-            </span>
-            <span>
-              <i class="fas fa-phone color-text-blue"></i>
-               <%= company.phone %>
-            </span>
-            <span>
-              <i class="fas fa-globe color-text-blue"></i>
-               <%= link_to company.website, company.website %>
-            </span>
-          </p>
-        </div>
+      </div>
+      <h3 class="company-name"><%= company.name %></h3>
+      <p class="company-description"><%= company.description %></p>
+      <div>
+        <p class="info-contact">
+          <span>
+            <i class="fas fa-map-marker-alt color-text-blue"></i>
+            <%= company.address %>
+          </span>
+        </p>
+        <p class="info-contact">
+          <span>
+            <i class="fas fa-envelope color-text-blue"></i>
+            <%= company.mail %>
+          </span>
+          <span>
+            <i class="fas fa-phone color-text-blue"></i>
+            <%= company.phone %>
+          </span>
+          <span>
+            <i class="fas fa-globe color-text-blue"></i>
+            <%= link_to company.website, company.website %>
+          </span>
+        </p>
       </div>
     </div>
+  </div>
   <% end %>
 </div>
