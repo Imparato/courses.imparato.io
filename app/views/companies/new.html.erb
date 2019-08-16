@@ -14,7 +14,9 @@
       <%= f.input :address, placeholder: 'Adresse :', label:  false %>
       <%= f.input :mail, placeholder: 'Email :', label:  false %>
       <%= f.input :description, placeholder: 'Descriptions, horaires, tarifs, etc... :', as: :text, label:  false %>
-      <%= f.association :tags, as: :check_boxes %>
+      <div class="tags">
+      <%= f.association :tags, as: :check_boxes, label: false%>
+      </div>
       <%= f.button :submit, "Envoyer", class: "btn btn-primary" %>
     <% end %>
   </div>
