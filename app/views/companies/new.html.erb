@@ -4,7 +4,7 @@
   <meta name="description" content= "<%= @site.meta_description %>">
 <% end %>
 
-<div class="container">
+<div class="container form-container">
   <div>
     <h2 class="contact-title">Proposez votre école/compagnie :</h2>
   </div>
@@ -15,7 +15,7 @@
       <%= f.input :mail, placeholder: 'Email :', label:  false %>
       <%= f.input :description, placeholder: 'Descriptions, horaires, tarifs, etc... :', as: :text, label:  false %>
       <div class="tags">
-      <%= f.association :tags, as: :check_boxes, label: false%>
+      <%= f.association :tags, as: :check_boxes, label: "Que proposez vous de jouer et quand ?"%>
       </div>
       <%= f.button :submit, "Envoyer", class: "btn btn-primary" %>
     <% end %>
