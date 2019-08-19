@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_10_205613) do
+ActiveRecord::Schema.define(version: 2019_08_19_204827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,11 +65,13 @@ ActiveRecord::Schema.define(version: 2019_08_10_205613) do
 
   create_table "contacts", force: :cascade do |t|
     t.string "user"
-    t.string "user_info"
     t.string "email"
     t.string "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "site_id"
+    t.boolean "read", default: false
+    t.index ["site_id"], name: "index_contacts_on_site_id"
   end
 
   create_table "cross_pages", force: :cascade do |t|
@@ -113,5 +115,6 @@ ActiveRecord::Schema.define(version: 2019_08_10_205613) do
   end
 
   add_foreign_key "companies", "sites"
+  add_foreign_key "contacts", "sites"
   add_foreign_key "cross_pages", "sites"
 end

@@ -14,7 +14,8 @@ class SitesController < ApplicationController
   end
 
   def retrieve_site_url
-    # @domain_name1 = request.original_url
+    # change also in contact controller and company controller
+    # @domain_name = request.original_url
   end
 
   def find_city_name_in_url
