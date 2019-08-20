@@ -14,10 +14,9 @@
 }
 .card-company-tags{
   display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   width: 100%;
-
 }
 .company-tag{
   background-color: $blue;
@@ -26,6 +25,7 @@
   padding: 5px 7px;
   border-radius: 3px;
   text-align: center;
+  width: 90px;
 }
 .info-contact >span{
   color: rgba(0,0,0,0.7);
