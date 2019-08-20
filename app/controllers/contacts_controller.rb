@@ -18,7 +18,7 @@ class ContactsController < ApplicationController
     @site = find_site
     @contact.site = @site
     if @contact.save
-      redirect_to "/"
+      redirect_to new_contact_path, notice: "Votre message a été bien transmis."
     else
       render action: "new", error: "Une erreur est survenue, veuillez réessayer"
     end
