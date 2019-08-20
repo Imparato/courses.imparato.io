@@ -13,11 +13,12 @@
     <div class="form-group col-sm-6 col-xs-12 aligned">
       <%= simple_form_for @contact do |f| %>
         <%= f.error_notification %>
-        <%= f.input :user, placeholder: 'Nom Prénom', label:  false %>
-        <%= f.input :email, placeholder: 'Votre email', label:  false %>
-        <%= f.input :body, placeholder: 'Votre message', class: "core-message",as: :text, label:  false %>
-
-        <%= f.button :submit, "Envoyer", class: "btn  btn-primary" %>
+        <%= f.input :user, placeholder: 'Nom Prénom', label:  false, input_html: { class: 'input-height'} %>
+        <%= f.input :email, placeholder: 'Votre email', label:  false, input_html: { class: 'input-height'} %>
+        <%= f.input :body, placeholder: 'Votre message',as: :text, label:  false %>
+        <div class="btn-contact-position">
+          <%= f.button :submit, "Envoyer", class: "btn  btn-primary btn-contact-size form-radius" %>
+        </div>
       <% end %>
     </div>
   </div>
