@@ -5,8 +5,8 @@
 <% end %>
 
 <div class="container form-container">
-  <div>
-    <h2 class="contact-title">Proposez votre école/compagnie :</h2>
+  <div class="text-center my-5">
+    <h2 class="mb-5">Proposez vos cours </h2>
     <p>Vous proposez des cours de théâtre mais vous ne les avez pas trouvé sur notre site? Signalez nous via le formulaire ci-dessous. </p>
   </div>
   <div class="form-group col-sm-8 offset-sm-2 col-xs-12 aligned">
@@ -14,7 +14,11 @@
       <%= f.input :name, placeholder: 'Nom :', label:  false %>
       <%= f.input :address, placeholder: 'Adresse :', label:  false %>
       <%= f.input :mail, placeholder: 'Email :', label:  false %>
-      <%= f.input :description, placeholder: 'Descriptions, horaires, tarifs, etc... :', as: :text, label:  false %>
+      <%= f.input :phone, placeholder: 'Téléphone :', label:  false %>
+      <%= f.input :website, placeholder: 'Site web :', label:  false %>
+      <%= f.input :description, placeholder: 'Description, horaires, tarifs, etc... :', as: :text, label:  false %>
+      <%= f.input :picture, label: 'Photo' %>
+      <%= f.input :picture_cache, as: :hidden %>
       <div class="tags">
       <%= f.association :tags, as: :check_boxes, label: "Que proposez vous de jouer et quand ?"%>
       </div>

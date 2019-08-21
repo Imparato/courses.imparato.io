@@ -12,7 +12,7 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.new(company_params_require)
+    @company = Company.new(company_params)
     @company.site = @site
     params[:company][:tag_ids].each do |tag_id|
       unless tag_id == ""
@@ -29,7 +29,7 @@ class CompaniesController < ApplicationController
 
   private
 
-  def company_params_require
-    params.require(:company).permit(:name, :address, :mail, :phone, :website, :description, :tags, :active)
+  def company_params
+    params.require(:company).permit(:name, :address, :mail, :phone, :website, :description, :tags, :active, :picture)
   end
 end
