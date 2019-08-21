@@ -21,7 +21,7 @@ class CompaniesController < ApplicationController
       end
     end
     if @company.save
-      redirect_to "/"
+      redirect_to new_company_path, notice: "Votre cours a été bien soumis."
     else
       render action: "new", error: "Can't be saved"
     end
