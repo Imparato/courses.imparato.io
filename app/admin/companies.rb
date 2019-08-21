@@ -18,6 +18,7 @@ ActiveAdmin.register Company do
     column :mail
     column :phone
     column :website
+    column :picture
     column :active
     column :tags do |company|
       company.tags.order("name ASC") do
@@ -37,6 +38,7 @@ ActiveAdmin.register Company do
       row :mail
       row :phone
       row :website
+      row :picture
       row :active
       attributes_table_for company do
         row :tags

@@ -6,7 +6,7 @@ class SitesController < ApplicationController
     # domain name to delete
     @domain_name = "coursdetheatremarseille.com"
     @site = Site.find_by(domain_name: @domain_name)
-    @companies = Company.where(site: @site, active: true).paginate(page: params[:page], per_page: 5)
+    @companies = Company.where(site: @site, active: true).page params[:page]
     @cross_pages = CrossPage.where(site: @site, active: true)
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
     :autolink => true, :space_after_headers => true)
