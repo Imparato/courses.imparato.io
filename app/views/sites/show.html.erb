@@ -40,7 +40,11 @@
   <!-- cards for compagnies -->
   <% @companies.each do |company| %>
     <div class="card-company">
-      <%= image_tag("theatre#{company.id % 5}") %>
+      <% if company.picture_url != nil %>
+        <%= cl_image_tag company.picture %>
+      <% else %>
+        <%= image_tag("theatre#{company.id % 5}") %>
+      <% end %>
       <div class="card-company-info">
         <div class="card-company-tags">
           <% company.tags.sort_by{|tag| tag.order}.each do |tag| %>

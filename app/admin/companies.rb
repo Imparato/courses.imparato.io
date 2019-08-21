@@ -11,7 +11,6 @@ ActiveAdmin.register Company do
     selectable_column
     id_column
     column :site
-    column :picture
     column :name
     column :address
     column :description
@@ -32,7 +31,6 @@ ActiveAdmin.register Company do
     attributes_table do
       row :site
       row :name
-      row :picture
       row :address
       row :description
       row :mail
