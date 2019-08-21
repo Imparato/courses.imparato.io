@@ -40,7 +40,7 @@ tetard = Company.create!(
   La formation dure, en effet, une année et s’effectue en plusieurs étapes allant
   de l’initiation jusqu’à l’approfondissement.",
   site:        coursamarseille,
-  active: "true",
+  active:      "true",
 )
 
 roche = Company.create!(
