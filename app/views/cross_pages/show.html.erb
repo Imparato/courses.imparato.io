@@ -46,18 +46,24 @@
           </span>
         </p>
         <p class="info-contact">
-          <span>
-            <i class="fas fa-envelope color-text-blue"></i>
-            <%= company.mail %>
-          </span>
-          <span>
-            <i class="fas fa-phone color-text-blue"></i>
-            <%= company.phone %>
-          </span>
-          <span>
-            <i class="fas fa-globe color-text-blue"></i>
-            <%= link_to company.website, company.website %>
-          </span>
+          <% unless company.mail.nil? %>
+            <span>
+              <i class="fas fa-envelope color-text-blue"></i>
+              <%= company.mail %>
+            </span>
+          <% end %>
+          <% unless company.phone.nil? %>
+            <span>
+              <i class="fas fa-phone color-text-blue"></i>
+              <%= company.phone %>
+            </span>
+          <% end %>
+          <% unless company.website.nil? %>
+            <span>
+              <i class="fas fa-globe color-text-blue"></i>
+              <%= link_to company.website, company.website %>
+            </span>
+          <% end %>
         </p>
       </div>
     </div>

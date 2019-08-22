@@ -11,6 +11,9 @@
 .card-company-info{
   margin: 0px 20px;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .card-company-tags{
   display: flex;
@@ -27,11 +30,18 @@
   text-align: center;
   width: 90px;
 }
-.info-contact >span{
-  color: rgba(0,0,0,0.7);
+.info-contact{
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.info-contact > span{
+  color: rgba(0,0,0,0.7) !important;
   margin-right: 20px;
   font-size: 15px;
   margin-bottom: 5px;
+}
+.info-contact > a{
+  color: rgba(0,0,0,0.7);
 }
 .company-name{
   font-weight: bold;
