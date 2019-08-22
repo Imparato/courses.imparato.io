@@ -8,7 +8,8 @@ class Company < ApplicationRecord
 
   paginates_per 5
   mount_uploader :picture, PictureUploader
-  # need to add validation on at least one field phone, mail or website
+
+  # validation at least one field phone, mail or website
   def validate_contact
     if phone.blank? && mail.blank? && website.blank?
       errors.add(:mail, "You must fill in at least one contact field")

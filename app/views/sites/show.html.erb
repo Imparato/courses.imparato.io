@@ -54,7 +54,7 @@
           <% end %>
         </div>
         <h3 class="company-name"><%= company.name %></h3>
-        <p class="company-description"><%= company.description %></p>
+        <p class="company-description"><%= CompanyDecorator.new(company).description_markdown %></p>
         <div>
           <p class="info-contact">
             <span>

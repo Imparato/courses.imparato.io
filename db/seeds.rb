@@ -36,7 +36,7 @@ tetard = Company.create!(
   description: "L’établissement propose chaque lundi deux cours de théâtre
   qui sont réservés exclusivement aux adultes. L’accent est mis sur
   la stimulation de la créativité chez les participants. Les professeurs,
-  dont Anabel Gransagne et David Simon, organisent, pour ce faire, des exercices.
+  dont *Anabel Gransagne et David Simon*, organisent, pour ce faire, des exercices.
   La formation dure, en effet, une année et s’effectue en plusieurs étapes allant
   de l’initiation jusqu’à l’approfondissement.",
   site:        coursamarseille,
@@ -71,7 +71,7 @@ divadlo = Company.create!(
   mail:        "mail@gmail.com",
   phone:       "04 09 87 98 98",
   website:     "www.sitedutheatre.com",
-  description: "L’établissement organise une formation à la pratique théâtrale pour les adultes et enfants. Les cours sont accessibles à tous les niveaux allant des débutants jusqu’aux avancés.",
+  description: "L’établissement organise une formation à la pratique théâtrale pour les adultes et enfants. Les cours sont accessibles *à tous les niveaux* allant des débutants jusqu’aux avancés.",
   site:        coursamarseille,
   active:      "true",
 )
