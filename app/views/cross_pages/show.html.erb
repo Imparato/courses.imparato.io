@@ -14,7 +14,7 @@
 </div>
 <!-- end banner -->
 <!-- company cards section -->
-<div class="container">
+<div class="container-cards">
   <% @companies.each do |company| %>
   <div class="card-company">
     <% if company.picture_url != nil %>
@@ -60,6 +60,7 @@
           <% end %>
           <% unless company.website.nil? %>
             <span>
+              <br class='br-website-to-display' style='display: none'>
               <i class="fas fa-globe color-text-blue"></i>
               <%= link_to company.website, company.website %>
             </span>
