@@ -22,9 +22,10 @@
   border-radius: 16px;
   opacity: 0.8;
   transition: opacity 0.3s ease;
-  margin: 5px;
+  margin: 8px;
   padding: 16px 32px;
   font-size: 16px;
+  transition: all 0.2s ease;
 
 }
 
@@ -32,7 +33,15 @@
   opacity: 1;
   color: #007bff;
   border: 2px solid #007bff;
+
 }
+
+.btn-ghost p {
+  transition: all 0.2s ease;
+
+}
+
 .btn-ghost:hover p {
   font-size: 18px;
+
 }
