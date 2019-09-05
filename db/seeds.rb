@@ -115,7 +115,7 @@ marseilleimpro.save!
 
 marseilletheatre = CrossPage.new(
   slug:             "theatre-a-marseille",
-  title:            "Cours d'improvisation à Marseille",
+  title:            "Cours de théâtre à Marseille",
   description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
   active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
@@ -128,8 +128,8 @@ marseilletheatre.save!
 
 marseillelundi = CrossPage.new(
   slug:             "lundi-a-marseille",
-  title:            "Cours d'improvisation sur Marseille",
-  description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
+  title:            "Cours sur Marseille le lundi",
+  description:      "Trouvez les meilleurs cours le lundi sur Marseille facilement",
   active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
@@ -140,8 +140,8 @@ marseillelundi.save!
 
 marseillemardi = CrossPage.new(
   slug:             "cours-de-theatre-mardi",
-  title:            "Cours d'improvisation à Marseille",
-  description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
+  title:            "Cours sur Marseille le mardi",
+  description:      "Trouvez les meilleurs cours le mardi sur Marseille facilement",
   active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
@@ -152,8 +152,8 @@ marseillemardi.save!
 
 marseillemercredi = CrossPage.new(
   slug:             "cours-de-theatre-mercredi",
-  title:            "Cours d'improvisation à Marseille",
-  description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
+  title:            "Cours sur Marseille le mercredi",
+  description:      "Trouvez les meilleurs cours le mercredi sur Marseille facilement",
   active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
@@ -164,9 +164,9 @@ marseillemercredi.save!
 
 marseillejeudi = CrossPage.new(
   slug:             "cours-a-marseille-jeudi",
-  title:            "Cours d'improvisation à Marseille",
-  description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
-  active:           "false",
+  title:            "Cours sur Marseille le jeudi",
+  description:      "Trouvez les meilleurs cours le jeudi sur Marseille facilement",
+  active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
   site:             coursamarseille,
@@ -176,8 +176,8 @@ marseillejeudi.save!
 
 marseillevendredi = CrossPage.new(
   slug:             "vendredi-a-marseille",
-  title:            "Cours d'improvisation à Marseille",
-  description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
+  title:            "Cours sur Marseille le vendredi",
+  description:      "Trouvez les meilleurs cours le vendredi sur Marseille facilement",
   banner:           File.new(File.join(Rails.root, "/app/assets/images/photo_marseille.jpeg")),
   active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
@@ -189,8 +189,8 @@ marseillevendredi.save!
 
 marseilleweekend = CrossPage.new(
   slug:             "weekend-a-marseille",
-  title:            "Cours d'improvisation à Marseille",
-  description:      "Trouvez les meilleurs cours d'improvisation sur Marseille facilement",
+  title:            "Cours sur Marseille le weekend",
+  description:      "Trouvez les meilleurs cours le weekend sur Marseille facilement",
   active:           "true",
   meta_title:       "Marseille PACA Bouche du Rhone 13",
   meta_description: "Les meilleurs cours du sud sont sur coursamarseille",
