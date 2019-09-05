@@ -9,48 +9,6 @@
   padding: 20px 50px 15px 50px;
   color: rgba(0,0,0,0.3);
 }
-@media (min-width: 960px) {
-  /* For a screen < 960px, this CSS will be read */
-  .footer-links {
-    display: flex;
-    align-items: center;
-  }
-  .footer-border {
-    border-right: 1px solid;
-  }
-}
-@media (max-width: 720px) {
-  /* For a screen < 720px, this CSS will be read */
-  .footer-links {
-    display: flex;
-    align-items: center;
-  }
-  .footer-border {
-    border-right: 1px solid;
-  }
-}
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
-  .footer-links {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .footer-border {
-    border-right: 0px solid;
-  }
-  .footer-copyright-size{
-    font-size: 15px;
-    margin: 10px 0px;
-  }
-  .footer-links hr {
-    width: 55px;
-    margin: 4px;
-    border: 1px solid black;
-    opacity: 0.3;
-  }
-}
-
 .footer-links a {
   color: black;
   opacity: 0.6;

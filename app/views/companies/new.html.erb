@@ -4,18 +4,30 @@
   <meta name="description" content= "<%= @site.meta_description %>">
 <% end %>
 
-<div class="container">
-  <div>
-    <h2 class="contact-title">Proposez votre école/compagnie :</h2>
+<div class="container form-container">
+  <div class="text-center my-5">
+    <h2 class="mb-5">Proposez vos cours </h2>
+    <p>Vous proposez des cours de théâtre mais vous ne les avez pas trouvé sur notre site? Signalez nous via le formulaire ci-dessous. </p>
   </div>
-  <div class="form-group col-sm-8 offset-sm-2 col-xs-12">
+  <div class="form-group col-sm-8 offset-sm-2 col-xs-12 aligned">
     <%= simple_form_for @company do |f| %>
       <%= f.input :name, placeholder: 'Nom :', label:  false %>
       <%= f.input :address, placeholder: 'Adresse :', label:  false %>
       <%= f.input :mail, placeholder: 'Email :', label:  false %>
-      <%= f.input :description, placeholder: 'Descriptions, horaires, tarifs, etc... :', as: :text, label:  false %>
-      <%= f.association :tags, as: :check_boxes %>
-      <%= f.button :submit, "Envoyer", class: "btn btn-primary" %>
+      <%= f.input :phone, placeholder: 'Téléphone :', label:  false %>
+      <%= f.input :website, placeholder: 'Site web :', label:  false %>
+      <%= f.input :description, placeholder: 'Description, horaires, tarifs, etc... :', as: :text, label:  false %>
+      <div class="upload-btn-wrapper">
+        <button class="btn-upload">Télécharger une photo</button>
+        <%= f.input :picture, label: false %>
+        <%= f.input :picture_cache, as: :hidden %>
+      </div>
+      <div class="tags">
+        <%= f.association :tags, as: :check_boxes, label: "Que proposez vous de jouer et quand ?"%>
+      </div>
+      <div class="btn-contact-position">
+        <%= f.button :submit, "Envoyer", class: "btn btn-primary btn-contact-size" %>
+      </div>
     <% end %>
   </div>
 </div>

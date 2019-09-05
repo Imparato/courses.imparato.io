@@ -1,6 +1,22 @@
 .navbar-imparato {
-  justify-content: space-between;
   background: white;
+  position: fixed!important;
+  width: 100%;
+  height: 54px;
+  margin: 0;
+  border: none;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  border-radius: 0;
+  transition: all .2s ease-in-out;
+  z-index: 1001;
+}
+[data-scrolldir=up] .navbar-imparato {
+    top: 0;
 }
 
 .navbar-imparato .navbar-collapse {
@@ -10,4 +26,35 @@
 .navbar-imparato .navbar-brand img {
  // width: 40px;
 }
+.logo-icon{
+  font-size: 36px;
+  color: $blue;
+  margin: 0px;
+}
 
+.nav-item a {
+  display: flex;
+  margin : 5px;
+  justify-content: space-around;
+}
+
+.container-nav{
+  margin: auto;
+    height: 100%;
+    width: 100%;
+    max-width: 1032px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+[data-scrolldir=down] .navbar, [data-scrolldir=off] .navbar {
+    top: -54px;
+}
+
+#section {
+  padding-top: 54px;
+
+}
+.navbar-hidden {
+  opacity:0;
+}

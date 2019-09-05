@@ -5,16 +5,21 @@
 <% end %>
 
 <div class="container">
-  <div>
-    <h2 class="contact-title">Contactez nous :</h2>
+  <div class="text-center my-5">
+    <h2 class='mb-5'>Contactez-nous</h2>
+    <p>Vous avez besoin de renseignement ou vous avez des suggestions à nous faire? Écrivez-nous via le formulaire ci-dessous. </p>
   </div>
-  <div class="form-group col-sm-8 offset-sm-2 col-xs-12">
-    <%= simple_form_for @contact do |f| %>
-      <%= f.input :user, placeholder: 'Nom :', label:  false %>
-      <%= f.input :user_info, placeholder: ' ???', label:  false %>
-      <%= f.input :email, placeholder: 'Email :', label:  false %>
-      <%= f.input :body, placeholder: 'Message :', as: :text, label:  false %>
-      <%= f.button :submit, "Envoyer", class: "btn btn-primary" %>
-    <% end %>
+  <div class="row justify-content-center">
+    <div class="form-group col-sm-6 col-xs-12 aligned">
+      <%= simple_form_for @contact do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :user, placeholder: 'Nom Prénom', label:  false, input_html: { class: 'input-height'} %>
+        <%= f.input :email, placeholder: 'Votre email', label:  false, input_html: { class: 'input-height'} %>
+        <%= f.input :body, placeholder: 'Votre message',as: :text, label:  false %>
+        <div class="btn-contact-position">
+          <%= f.button :submit, "Envoyer", class: "btn  btn-primary btn-contact-size form-radius" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

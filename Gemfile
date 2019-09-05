@@ -21,6 +21,7 @@ gem "uglifier", ">= 1.3.0"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "font-awesome-sass", "~> 5.6.1"
 gem "jbuilder", "~> 2.5"
+gem "kaminari"
 gem "simple_form"
 
 # Use ActiveModel has_secure_password

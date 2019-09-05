@@ -1,0 +1,17 @@
+.input-height{
+  height: 55px !important;
+}
+.btn-contact-position{
+  display: flex;
+  justify-content: space-around;
+}
+.btn-contact-size{
+  width: 320px !important;
+  height: 55px !important;
+}
+.envelope-contact{
+  font-size: 128px;
+  background: linear-gradient(to right, rgb(148, 115, 221) 0%, rgb(26, 201, 228) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

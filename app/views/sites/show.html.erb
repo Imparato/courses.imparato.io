@@ -3,56 +3,97 @@
   <title><%= @site.meta_title %></title>
   <meta name="description" content= "<%= @site.meta_description %>">
 <% end %>
-
 <!-- banner -->
-<!-- <div class="banner"
-  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path @site.banner%>')"> -->
-  <div class="banner">
+<div class="banner"
+  style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)),
+  url('<%= cl_image_path @site.banner%>')">
   <div class="container">
     <h1><%= @site.title %></h1>
     <p><%= @site.description %></p>
   </div>
 </div>
+<!-- end of banner -->
 
-<!--
-<% @companies.each do |company| %>
-<p><%= company.name %></p>
-<% end %>
- -->
-
-
-<!-- cards for cross-pages -->
-<div class="container">
-  <div class="title">Trouvez la troupe qui vous correspond</div>
-    <div class="cards">
-      <% @cross_pages.each do |cross_page| %>
-        <%= link_to "#{cross_page.slug}" do %>
-          <div class="card-category">
-             <%= cross_page.tags.first.name.capitalize %>
-          </div>
+<!-- cards for cross-pages section -->
+<div class="page-section-container background-white">
+  <div class="container">
+    <h2 class="sub-title">Trouvez la troupe qui vous correspond</h2>
+    <!-- cards for cross-pages -->
+    <div class="cards-container">
+      <% @cross_pages.sort_by{|cross_page| cross_page.tags.first.order}.each do |cross_page| %>
+      <%= link_to "#{cross_page.slug}" do %>
+      <div class="card-container">
+        <p><%= cross_page.tags.first.name.upcase %><p>
+        </div>
         <% end %>
-      <% end %>
-    </div>
-
-
-<div class="title subtitle"> Ils font du théâtre à <%= find_city_name_in_url.capitalize %>
-  </div>
-
-
-<% @companies.where(active: true).last(5).each do |company| %>
-  <div class="card-product">
-    <%= image_tag("theatre#{company.id % 5}") %>
-    <div class="card-product-infos">
-      <div class="d-flex justify-content-between">
-        <h2><%= company.name %></h2>
-        <p class="mail"><%= company.mail %></p>
+        <% end %>
       </div>
-      <p class="address"><%= company.address%></p>
-      <p><%= company.description %></p>
     </div>
   </div>
-<% end %>
 
+<!-- end section for cross-pages -->
+
+<!-- section for compagnies -->
+<div class="page-section-container">
+  <div class="container-cards">
+  <h2 class="sub-title"> Ils font du théâtre à <%= find_city_name_in_url.capitalize %></h2>
+  <!-- cards for compagnies -->
+  <% @companies.each do |company| %>
+    <div class="card-company">
+      <% if company.picture_url != nil %>
+        <%= cl_image_tag company.picture %>
+      <% else %>
+        <%= image_tag("theatre#{company.id % 5}") %>
+      <% end %>
+      <div class="card-company-info">
+        <div class="card-company-tags">
+          <% company.tags.sort_by{|tag| tag.order}.each do |tag| %>
+            <div class="company-tag">
+              <%= tag.name.capitalize %>
+            </div>
+          <% end %>
+        </div>
+        <div>
+          <h3 class="company-name"><%= company.name %></h3>
+          <p class="company-description"><%= CompanyDecorator.new(company).description_markdown %></p>
+        </div>
+        <div class='mt-3'>
+          <p class="info-contact">
+            <span>
+              <i class="fas fa-map-marker-alt color-text-blue"></i>
+              <%= company.address %>
+            </span>
+          </p>
+          <p class="info-contact">
+            <% unless company.mail.nil? %>
+              <span>
+                <i class="fas fa-envelope color-text-blue"></i>
+                <%= company.mail %>
+              </span>
+            <% end %>
+            <% unless company.phone.nil? %>
+              <span>
+                <i class="fas fa-phone color-text-blue"></i>
+                <%= company.phone %>
+              </span>
+            <% end %>
+            <% unless company.website.nil? %>
+              <span>
+                <br class='br-website-to-display' style='display: none'>
+                <i class="fas fa-globe color-text-blue"></i>
+                <%= link_to company.website, company.website %>
+              </span>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+<div class="d-flex justify-content-around mb-5 ">
+  <div class="">
+    <%= paginate @companies %>
+  </div>
 </div>
 

@@ -1,0 +1,34 @@
+#section {
+  min-height: calc(100vh - 100px); /* Total height - (Navbar height + Footer height) */
+}
+body {
+
+  font-family: 'Libre Baskerville', serif;
+  background-color: #F7F7F7;
+  //background-color: #F6F8FA;
+  //background-color: #F8F9FA;
+  //background-color: #F3F9FB;
+  //background-color: #FDFDF6; //blue
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Nunito", sans-serif;
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+a{
+  text-decoration: none;
+  color: #333333;
+
+  &:hover{
+    text-decoration:none;
+  }
+}
+.color-text-blue{
+  color: $blue;
+}
