@@ -16,13 +16,14 @@
 
 <!-- cards for cross-pages section -->
 <div class="page-section-container background-white">
-  <div class="container">
-    <h2 class="sub-title">Trouvez la troupe qui vous correspond</h2>
+  <div class="container" id='cards-container-wrap'>
+    <h2 class="sub-title" id='display-block'>Trouvez la troupe qui vous correspond</h2>
     <!-- cards for cross-pages -->
     <div class="cards-container">
+
       <% @cross_pages.sort_by{|cross_page| cross_page.tags.first.order}.each do |cross_page| %>
       <%= link_to "#{cross_page.slug}" do %>
-      <div class="card-container">
+      <div class="btn btn-ghost">
         <p><%= cross_page.tags.first.name.upcase %><p>
         </div>
         <% end %>

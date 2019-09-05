@@ -1,18 +1,38 @@
-.card-container{
-  background-image: linear-gradient(#141E30, #243B55, #141E30);
-  border-radius: 3px;
-  width: 100%;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: bold;
+// .card-container{
+//   background-image: linear-gradient(#141E30, #243B55, #141E30);
+//   border-radius: 3px;
+//   width: 100%;
+//   z-index: 2;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: white;
+//   font-weight: bold;
+
+// }
+// .card-container:hover{
+//   opacity: 1;
+//   background-image: linear-gradient(#181F35, #103050, #181F35);
+//   box-shadow: 0 0 15px rgba(0,0,0,0.5);
+//   font-size: 34px;
+// }
+.btn-ghost {
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 16px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  margin: 5px;
+  padding: 16px 32px;
+  font-size: 16px;
 
 }
-.card-container:hover{
+
+.btn-ghost:hover {
   opacity: 1;
-  background-image: linear-gradient(#181F35, #103050, #181F35);
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  font-size: 34px;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+.btn-ghost:hover p {
+  font-size: 18px;
 }
