@@ -25,10 +25,15 @@
   background-color: $blue;
   color: white;
   margin: 8px 0px 15px 15px;
-  padding: 5px 7px;
+  padding: 8px;
   border-radius: 3px;
   text-align: center;
   width: 90px;
+  line-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 .info-contact{
   margin-bottom: 5px;
