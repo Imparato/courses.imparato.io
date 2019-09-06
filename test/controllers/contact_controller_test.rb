@@ -3,15 +3,12 @@
 require "test_helper"
 
 class ContactControllerTest < ActionDispatch::IntegrationTest
-<<<<<<< HEAD
   test "should get new form" do
     assert_routing '/contacts/new', controller: 'contacts', action: 'new'
-=======
+  end
   test "creating a contact" do
     get new_contact_path
     assert_response :success, @response.body
-
->>>>>>> 03e16c27d8bc884d7893a7f85bbb94c600048e51
   end
 end
 
