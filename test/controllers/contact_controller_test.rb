@@ -6,10 +6,6 @@ class ContactControllerTest < ActionDispatch::IntegrationTest
   test "should get new form" do
     assert_routing '/contacts/new', controller: 'contacts', action: 'new'
   end
-  test "creating a contact" do
-    get new_contact_path
-    assert_response :success, @response.body
-  end
 end
 
 # visit new_contact_path
