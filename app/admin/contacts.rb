@@ -3,7 +3,7 @@ ActiveAdmin.register Contact do
   actions :all
 
   permit_params do
-    permitted = [:user, :user_info, :email, :body]
+    permitted = [:user, :email, :body]
   end
   filter :site
   filter :created_at
