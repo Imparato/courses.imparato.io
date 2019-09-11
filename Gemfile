@@ -53,6 +53,7 @@ group :development, :test do
   gem "rubocop", require: false
   gem "rubocop-performance"
   gem "rubocop-rails"
+  gem "minitest-reporters"
 end
 
 # Run against the latest stable release

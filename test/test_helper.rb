@@ -4,7 +4,7 @@ ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
 require "capybara/rails"
-require 'capybara/minitest'
+require "capybara/minitest"
 
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
@@ -21,7 +21,6 @@ end
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
 
-
   # Add more helper methods to be used by all tests here...
   # Devise test helpers
   include Warden::Test::Helpers
@@ -35,3 +34,5 @@ Capybara.register_driver :headless_chrome do |app|
 end
 Capybara.save_path = Rails.root.join('tmp/capybara')
 Capybara.javascript_driver = :headless_chrome
+require 'minitest/reporters'
+Minitest::Reporters.use! [Minitest::Reporters::SpecReporter.new]
