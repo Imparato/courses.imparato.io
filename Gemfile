@@ -23,7 +23,7 @@ gem "font-awesome-sass", "~> 5.6.1"
 gem "jbuilder", "~> 2.5"
 gem "kaminari"
 gem "simple_form"
-
+gem 'webpacker', '~> 3.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -42,7 +42,7 @@ gem "cloudinary", "~> 1.9.1"
 gem "devise"
 # decorator, for display methods
 gem "draper"
-#markdown
+# markdown
 gem "redcarpet"
 
 group :development, :test do
@@ -53,11 +53,19 @@ group :development, :test do
   gem "rubocop", require: false
   gem "rubocop-performance"
   gem "rubocop-rails"
+
+  gem "capybara"
+  gem "chromedriver-helper"
+  gem "launchy"
+  gem "webdrivers", "~> 4.0"
+  # Adds support for Capybara system testing and selenium driver
+  gem "selenium-webdriver"
+  # Easy installation and use of chromedriver to run system tests with Chrome
 end
 
 # Run against the latest stable release
 group :development, :test do
-  gem 'rspec-rails', '~> 3.8'
+  gem "rspec-rails", "~> 3.8"
 end
 
 group :development do
@@ -70,12 +78,7 @@ group :development do
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem "capybara", ">= 2.15"
-  gem "selenium-webdriver"
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem "chromedriver-helper"
-  gem "launchy"
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

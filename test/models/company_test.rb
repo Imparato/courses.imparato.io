@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require "application_system_test_case"
 
-class CompanyTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class CompanyTest < ApplicationSystemTestCase
+  test "visiting the index" do
+    visit "/"
+    assert_selector "h1", text: "Souhaitez-vous vous afficher sous les projecteurs?"
+  end
 end
