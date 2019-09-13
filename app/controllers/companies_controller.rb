@@ -7,8 +7,8 @@ class CompaniesController < ApplicationController
   end
 
   def find_site
-    # @domain_name = request.original_url
-    @domain_name = "coursdetheatremarseille.com"
+    @domain_name = request.original_url
+    # @domain_name = "coursdetheatremarseille.com"
     @site = Site.find_by(domain_name: @domain_name)
   end
 
