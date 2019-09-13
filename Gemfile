@@ -54,6 +54,9 @@ group :development, :test do
   gem "rubocop-performance"
   gem "rubocop-rails"
   gem "minitest-reporters"
+  gem 'capybara'
+  gem 'webdrivers', '~> 4.0'
+  gem 'launchy'
 end
 
 # Run against the latest stable release
@@ -72,11 +75,9 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem "capybara", ">= 2.15"
   gem "selenium-webdriver"
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem "chromedriver-helper"
-  gem "launchy"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
