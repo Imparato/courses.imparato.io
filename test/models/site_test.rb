@@ -6,5 +6,6 @@ class ProductsTest < ApplicationSystemTestCase
   test "visiting the homepage" do
     visit "/"
     assert_selector "h1", text: "Souhaitez-vous vous afficher sous les projecteurs?"
+
   end
 end

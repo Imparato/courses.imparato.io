@@ -1,10 +1,9 @@
-# frozen_string_literal: true
 
 require "application_system_test_case"
 
-class CompaniesTest < ApplicationSystemTestCase
+class SitesTest < ApplicationSystemTestCase
   test "visiting the index" do
     visit "/"
-    assert_selector "h1", text: "Souhaitez-vous vous afficher sous les projecteurs?"
+    assert_selector "h2", text: "Trouvez la troupe qui vous correspond"
   end
 end
