@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+
   </head>
 
   <body>
@@ -20,6 +21,7 @@
     <%= render 'shared/footer' %>
 
     <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

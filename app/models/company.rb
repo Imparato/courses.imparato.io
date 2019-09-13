@@ -11,8 +11,6 @@ class Company < ApplicationRecord
 
   # validation at least one field phone, mail or website
   def validate_contact
-    if phone.blank? && mail.blank? && website.blank?
-      errors.add(:mail, "You must fill in at least one contact field")
-    end
+    errors.add(:mail, "You must fill in at least one contact field") if phone.blank? && mail.blank? && website.blank?
   end
 end

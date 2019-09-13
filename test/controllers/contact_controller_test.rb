@@ -3,6 +3,7 @@
 require "test_helper"
 
 class ContactControllerTest < ActionDispatch::IntegrationTest
+
   test "testing contact creation" do
     assert_routing "/contacts/new", { controller: "contacts", action: "new" }, {}, {}, "trouble creating contact"
   end

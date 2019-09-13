@@ -8,7 +8,7 @@ class SitesTest < ApplicationSystemTestCase
 
   test "click Contactez-nous" do
     visit "/"
-    click_on 'Contactez-nous'
+    click_on "Contactez-nous"
     assert_equal "/contacts/new", page.current_path
     assert_text "Contactez-nous"
   end

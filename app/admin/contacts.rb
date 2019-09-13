@@ -1,5 +1,5 @@
 ActiveAdmin.register Contact do
-# frozen_string_literal: true
+  # frozen_string_literal: true
   actions :all
 
   permit_params do

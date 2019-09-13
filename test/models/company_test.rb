@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-require "test_helper"
-# require "minitest/autorun"
+require "application_system_test_case"
 
-class CompaniesTest < ActionController::TestCase
+class CompanyTest < ApplicationSystemTestCase
 end
