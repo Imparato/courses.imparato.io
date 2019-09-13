@@ -12,8 +12,7 @@ class SitesController < ApplicationController
 
   def retrieve_site_url
     # change also in contact controller and company controller
-    match_domain_name = request.original_url.match(/coursde.*com/)
-    @domain_name = match_domain_name
+    @domain_name = request.original_url.match(/coursde.*com/)[0]
   end
 
   def find_city_name_in_url
