@@ -1,0 +1,15 @@
+.cards-container {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  // grid-gap: 16px;
+  display:flex;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: center;
+  display:inline-block;
+}
+#cards-container-wrap {
+  text-align: center;
+}
+
+

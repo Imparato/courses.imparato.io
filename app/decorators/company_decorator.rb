@@ -11,4 +11,8 @@ class CompanyDecorator < Draper::Decorator
   #       object.created_at.strftime("%a %m/%d/%y")
   #     end
   #   end
+  def description_markdown
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true)
+    markdown.render(description).html_safe
+  end
 end

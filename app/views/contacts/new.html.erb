@@ -4,11 +4,22 @@
   <meta name="description" content= "<%= @site.meta_description %>">
 <% end %>
 
-
-<%= simple_form_for @contact do |f| %>
-  <%= f.input :user %>
-  <%= f.input :user_info %>
-  <%= f.input :email %>
-  <%= f.input :body %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <div class="text-center my-5">
+    <h2 class='mb-5'>Contactez-nous</h2>
+    <p>Vous avez besoin de renseignement ou vous avez des suggestions à nous faire? Écrivez-nous via le formulaire ci-dessous. </p>
+  </div>
+  <div class="row justify-content-center">
+    <div class="form-group col-sm-6 col-xs-12 aligned">
+      <%= simple_form_for @contact do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :user, placeholder: 'Nom Prénom', label:  false, input_html: { class: 'input-height'} %>
+        <%= f.input :email, placeholder: 'Votre email', label:  false, input_html: { class: 'input-height'} %>
+        <%= f.input :body, placeholder: 'Votre message',as: :text, label:  false %>
+        <div class="btn-contact-position">
+          <%= f.button :submit, "Envoyer", class: "btn  btn-primary btn-contact-size form-radius" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

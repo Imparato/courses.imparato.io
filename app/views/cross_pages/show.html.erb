@@ -1,13 +1,73 @@
 <!-- insert meta information of page -->
 <% content_for :meta do %>
-  <title><%= @cross_page.meta_title %></title>
-  <meta name="description" content= "<%= @cross_page.meta_description %>">
+<title><%= @cross_page.meta_title %></title>
+<meta name="description" content= "<%= @cross_page.meta_description %>">
 <% end %>
-
-hello
-
-<%= @cross_page.title %>
-
-<% @companies.each do |company| %>
-  <%= company.name %>
-<% end %>
+<!-- banner -->
+<div class="banner"
+  style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)),
+  url('<%= cl_image_path @cross_page.banner%>')">
+  <div class="container">
+    <h1><%= @cross_page.title %></h1>
+    <p><%= @cross_page.description %></p>
+  </div>
+</div>
+<!-- end banner -->
+<!-- company cards section -->
+<div class="container-cards">
+  <% @companies.each do |company| %>
+  <div class="card-company">
+    <% if company.picture_url != nil %>
+      <%= cl_image_tag company.picture %>
+    <% else %>
+      <%= image_tag("theatre#{company.id % 5}") %>
+    <% end %>
+    <div class="card-company-info">
+      <div class="card-company-tags">
+        <% company.tags.sort_by{|tag| tag.order}.each do |tag| %>
+          <% if tag != @cross_page.tags.first %>
+              <div class="company-tag">
+              <%= tag.name.capitalize %>
+              </div>
+            <% else %>
+              <div class="company-tag company-tag-active">
+              <%= tag.name.capitalize %>
+              </div>
+        <% end %>
+          <% end %>
+      </div>
+      <h3 class="company-name"><%= company.name %></h3>
+      <p class="company-description"><%= CompanyDecorator.new(company).description_markdown %></p>
+      <div>
+        <p class="info-contact">
+          <span>
+            <i class="fas fa-map-marker-alt color-text-blue"></i>
+            <%= company.address %>
+          </span>
+        </p>
+        <p class="info-contact">
+          <% unless company.mail.nil? %>
+            <span>
+              <i class="fas fa-envelope color-text-blue"></i>
+              <%= company.mail %>
+            </span>
+          <% end %>
+          <% unless company.phone.nil? %>
+            <span>
+              <i class="fas fa-phone color-text-blue"></i>
+              <%= company.phone %>
+            </span>
+          <% end %>
+          <% unless company.website.nil? %>
+            <span>
+              <br class='br-website-to-display' style='display: none'>
+              <i class="fas fa-globe color-text-blue"></i>
+              <%= link_to company.website, company.website %>
+            </span>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

@@ -9,21 +9,24 @@ class ContactsController < ApplicationController
 
   def find_site
     @domain_name = "coursdetheatremarseille.com"
+    # @domain_name = request.original_url
     @site = Site.find_by(domain_name: @domain_name)
   end
 
   def create
     @contact = Contact.new(contacts_params)
+    @site = find_site
+    @contact.site = @site
     if @contact.save
-      redirect_to "/"
+      redirect_to new_contact_path, notice: "Votre message a été bien transmis."
     else
-      render action: "new", error: "Can't be sent"
+      render action: "new", error: "Une erreur est survenue, veuillez réessayer"
     end
   end
 
   private
 
   def contacts_params
-    params.require(:contact).permit(:user, :user_info, :email, :body)
+    params.require(:contact).permit(:user, :email, :body, :read)
   end
 end

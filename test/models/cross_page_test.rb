@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 require "test_helper"
+require "minitest/autorun"
 
-class CrossPageTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class CrosspageRouteTest < ActionDispatch::IntegrationTest
 end

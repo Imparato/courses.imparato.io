@@ -1,0 +1,68 @@
+.container-cards{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.card-company{
+  background: white;
+  border: 1px solid rgba(20,20,20, 0.1);
+  display: flex;
+  margin: 30px;
+  padding: 8px;
+}
+.card-company img {
+  object-fit: cover;
+}
+.card-company-info{
+  margin: 0px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-company-tags{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+.company-tag{
+  background-color: $blue;
+  color: white;
+  margin: 8px 0px 15px 15px;
+  border-radius: 3px;
+  text-align: center;
+  width: 90px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.info-contact{
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.info-contact > span{
+  color: rgba(0,0,0,0.7) !important;
+  margin-right: 20px;
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.info-contact > a{
+  color: rgba(0,0,0,0.7);
+}
+.company-name{
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.company-description{
+  margin-bottom: 20px;
+}
+.company-tag-active {
+  border: 1px dotted blue;
+  filter: grayscale(50%);
+  opacity : 0.9;
+}
+
+// #007bff

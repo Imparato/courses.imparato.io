@@ -1,0 +1,124 @@
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn-upload {
+  border: 1px solid rgba(50, 50, 50, 0.2);
+  color: rgba(50, 50, 50, 0.6);
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+#contact_body,  {
+  min-height: 300px;
+}
+#company_description {
+  min-height: 100px;
+}
+
+.tags fieldset legend {
+  text-align: left;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.tags div {
+    margin: 10px 5px;
+
+}
+#new_company > input.btn.btn.btn-primary {
+    position: relative;
+    left: 45%;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.form-container {
+  //background-color: rgb(255,255,255);
+  padding-top: 20px;
+  min-height: 1vh;
+}
+/* Cachons la case à cocher */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+/* on prépare le label */
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative; /* permet de positionner les pseudo-éléments */
+  padding-left: 25px; /* fait un peu d'espace pour notre case à venir */
+  cursor: pointer;    /* affiche un curseur adapté */
+}
+/* Aspect des checkboxes */
+/* :before sert à créer la case à cocher */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: 2px;
+  width: 17px; height: 17px; /* dim. de la case */
+  border: 1px solid #aaa;
+  background: rgba(250,250,250, 1);
+  border-radius: 2px; /* angles arrondis */
+  box-shadow: inset 0 0px 1px rgba(0,0,0,.3); /* légère ombre interne */
+}
+[type="checkbox"]:checked + label:before {
+  background-color: rgba(16, 122, 248,1);
+}
+
+/* Aspect général de la coche */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: 0; left: 4px;
+  font-size: 14px;
+  color: rgba(255,255,255,1);
+  transition: all .2s; /* on prévoit une animation */
+}
+/* Aspect si "pas cochée" */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0; /* coche invisible */
+  transform: scale(0); /* mise à l'échelle à 0 */
+}
+/* Aspect si "cochée" */
+[type="checkbox"]:checked + label:after {
+  opacity: 1; /* coche opaque */
+  transform: scale(1); /* mise à l'échelle 1:1 */
+}
+/* aspect désactivée */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+/* styles de la coche (si cochée/désactivée) */
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+/* on style aussi le label quand désactivé */
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+
+/* aspect au focus de l'élément */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px solid blue;
+}
