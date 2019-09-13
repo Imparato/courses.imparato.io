@@ -141,7 +141,7 @@ marseillelundi.remote_banner_url = url
 marseillelundi.save!
 
 marseillemardi = CrossPage.new(
-  slug:             "cours-de-theatre-mardi",
+  slug:             "mardi-a-marseille",
   title:            "Cours sur Marseille le mardi",
   description:      "Trouvez les meilleurs cours le mardi sur Marseille facilement",
   active:           "true",
@@ -153,7 +153,7 @@ marseillemardi.remote_banner_url = url
 marseillemardi.save!
 
 marseillemercredi = CrossPage.new(
-  slug:             "cours-de-theatre-mercredi",
+  slug:             "mercredi-a-marseille",
   title:            "Cours sur Marseille le mercredi",
   description:      "Trouvez les meilleurs cours le mercredi sur Marseille facilement",
   active:           "true",
@@ -165,7 +165,7 @@ marseillemercredi.remote_banner_url = url
 marseillemercredi.save!
 
 marseillejeudi = CrossPage.new(
-  slug:             "cours-a-marseille-jeudi",
+  slug:             "jeudi-a-marseille",
   title:            "Cours sur Marseille le jeudi",
   description:      "Trouvez les meilleurs cours le jeudi sur Marseille facilement",
   active:           "true",
@@ -239,3 +239,10 @@ marseillevendredi.tags << vendredi
 marseilleweekend.tags << week_end
 
 puts "All done"
+
+require_relative "./seed_toulouse"
+require_relative "./seed_nantes"
+require_relative "./seed_montpellier"
+require_relative "./seed_lyon"
+require_relative "./seed_bruxelles"
+require_relative "./seed_bordeaux"
