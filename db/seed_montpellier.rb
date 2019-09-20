@@ -12,7 +12,7 @@ coursamontpellier = Site.new(
   active:           "true",
   analytics:        "2",
 )
-url = "https://images.unsplash.com/photo-1560895517-08bdabc9c17a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80"
+url = "https://www.montpellier.fr/uploads/Image/70/29354_083_banner-ville-Montpellier.jpg"
 coursamontpellier.remote_banner_url = url
 coursamontpellier.save!
 
@@ -90,7 +90,7 @@ cours = Company.create!(
 )
 
 puts "Creating CrossPages"
-url = "https://images.unsplash.com/photo-1544391641-ccb92906e11c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+# url = "https://images.unsplash.com/photo-1544391641-ccb92906e11c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
 
 montpellierimpro = CrossPage.new(
   slug:             "impro-a-montpellier",

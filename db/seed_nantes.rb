@@ -12,7 +12,7 @@ coursanantes = Site.new(
   active:           "true",
   analytics:        "2",
 )
-url = "https://images.unsplash.com/photo-1560895517-08bdabc9c17a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80"
+url = "https://www.francevelotourisme.com/sites/default/files/styles/itineraire/public/medias/images/nantes-chateau-miroir-d-eau.jpg?h=0c2904f9&itok=8hcvHaEg"
 coursanantes.remote_banner_url = url
 coursanantes.save!
 
@@ -90,7 +90,7 @@ cours = Company.create!(
 )
 
 puts "Creating CrossPages"
-url = "https://images.unsplash.com/photo-1544391641-ccb92906e11c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+# url = "https://images.unsplash.com/photo-1544391641-ccb92906e11c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
 
 nantesimpro = CrossPage.new(
   slug:             "impro-a-nantes",

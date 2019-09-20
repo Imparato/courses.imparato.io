@@ -63,6 +63,11 @@ group :development, :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem "minitest-reporters"
   gem 'capybara'
+  gem "minitest-rails"
+  gem "factory_bot_rails"
+  gem "pry-byebug"
+  gem "pry-rails"
+  gem 'mocha'
 end
 
 # Run against the latest stable release

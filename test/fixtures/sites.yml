@@ -1,8 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+marseille:
+  name: marseille
+  domain_name: coursdetheatremarseille.com:3000/
+  meta_title: MyString
+  meta_description: MyText
+  banner: MyString
+  title: MyString
+  description: MyText
+  active: true
+  analytics: MyString
+
+two:
   name: MyString
-  domain_name: coursdetheatremarseille.com
+  domain_name: coursdetheatrebruxelles.com
   meta_title: MyString
   meta_description: MyText
   banner: MyString
@@ -10,14 +21,3 @@ one:
   description: MyText
   active: false
   analytics: MyString
-
-# two:
-#   name: MyString
-#   domain_name: MyString
-#   meta_title: MyString
-#   meta_description: MyText
-#   banner: MyString
-#   title: MyString
-#   description: MyText
-#   active: false
-#   analytics: MyString
