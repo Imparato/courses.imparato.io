@@ -12,7 +12,7 @@ coursalyon = Site.new(
   active:           "true",
   analytics:        "2",
 )
-url = "https://images.unsplash.com/photo-1560895517-08bdabc9c17a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80"
+url = "https://images.unsplash.com/photo-1537015125382-74e1f1c99ac4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 coursalyon.remote_banner_url = url
 coursalyon.save!
 
@@ -90,7 +90,7 @@ cours = Company.create!(
 )
 
 puts "Creating CrossPages"
-url = "https://images.unsplash.com/photo-1544391641-ccb92906e11c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+# url = "https://images.unsplash.com/photo-1544391641-ccb92906e11c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
 
 lyonimpro = CrossPage.new(
   slug:             "impro-a-lyon",

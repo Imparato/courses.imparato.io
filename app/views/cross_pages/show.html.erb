@@ -16,6 +16,7 @@
 <!-- company cards section -->
 <div class="container-cards">
   <% @companies.each do |company| %>
+
   <div class="card-company">
     <% if company.picture_url != nil %>
       <%= cl_image_tag company.picture %>
