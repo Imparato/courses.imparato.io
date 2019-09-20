@@ -1,23 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Marseille
   domain_name: coursdetheatremarseille.com
-  meta_title: MyString
+  meta_title: randominsite
   meta_description: MyText
-  banner: MyString
-  title: MyString
+  banner: randominsite
+  title: randominsite
   description: MyText
-  active: false
-  analytics: MyString
+  active: true
+  analytics: randominsite
 
 two:
-  name: MyString
+  name: bruxelle
   domain_name: coursdetheatrebruxelles.com
-  meta_title: MyString
+  meta_title: randominsite
   meta_description: MyText
-  banner: MyString
-  title: MyString
+  banner: randominsite
+  title: randominsite
   description: MyText
-  active: false
-  analytics: MyString
+  active: true
+  analytics: randominsite
