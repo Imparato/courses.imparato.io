@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ContactsController < ApplicationController
-  before_action :find_site
+  before_action :find_site, except: [:find_site_stub]
 
   def new
     @contact = Contact.new
@@ -11,6 +11,13 @@ class ContactsController < ApplicationController
     # @domain_name = "coursdetheatremarseille.com"
     @domain_name = request.original_url.match(/coursde.*com/)[0]
     @site = Site.find_by(domain_name: @domain_name)
+  end
+
+ def find_site_stub
+  @contact = Contact.new
+    # @domain_name = "coursdetheatremarseille.com"
+    @domain_name = request.original_url.match(/coursde.*com/)[0]
+    Site.find_by(domain_name: @domain_name)
   end
 
   def create
