@@ -5,6 +5,7 @@
 .card-company{
   background: white;
   border: 1px solid rgba(20,20,20, 0.1);
+  border-radius: 5px;
   display: flex;
   margin: 30px;
   padding: 8px;
@@ -34,7 +35,7 @@
   background-color: $blue;
   color: white;
   margin: 8px 0px 15px 15px;
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
   width: 90px;
   padding: 8px;
@@ -74,6 +75,11 @@
 
 .mt-3 {
   text-align: right;
+}
+
+.color-logo-card {
+  color: #F7F7F7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 // #007bff
