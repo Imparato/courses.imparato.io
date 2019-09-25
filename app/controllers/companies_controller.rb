@@ -4,6 +4,7 @@ class CompaniesController < ApplicationController
   before_action :find_site
   def new
     @company = Company.new
+    @site = find_site
   end
 
   def find_site
@@ -14,6 +15,7 @@ class CompaniesController < ApplicationController
 
   def create
     @company = Company.new(company_params)
+    @site = find_site
     @company.site = @site
     params[:company][:tag_ids].each do |tag_id|
       unless tag_id == ""
