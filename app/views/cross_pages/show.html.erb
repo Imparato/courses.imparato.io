@@ -27,11 +27,11 @@
       <div class="card-company-tags">
         <% company.tags.sort_by{|tag| tag.order}.each do |tag| %>
           <% if tag != @cross_page.tags.first %>
-              <div class="company-tag">
+              <div class="company-tag" style="background-color: <%= tag.color %>">
               <%= tag.name.capitalize %>
               </div>
             <% else %>
-              <div class="company-tag company-tag-active">
+              <div class="company-tag company-tag-active"style="background-color: <%= tag.color %>">
               <%= tag.name.capitalize %>
               </div>
         <% end %>
