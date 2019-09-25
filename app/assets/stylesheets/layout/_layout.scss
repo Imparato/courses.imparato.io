@@ -2,8 +2,6 @@
   min-height: calc(100vh - 100px); /* Total height - (Navbar height + Footer height) */
 }
 body {
-
-  font-family: 'Libre Baskerville', serif;
   background-color: #F7F7F7;
   //background-color: #F6F8FA;
   //background-color: #F8F9FA;
@@ -11,6 +9,7 @@ body {
   //background-color: #FDFDF6; //blue
 }
 * {
+  font-family: "Nunito", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,6 +19,8 @@ h1, h2, h3, h4, h5, h6 {
     color: #333333;
     font-weight: 600;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+
 }
 a{
   text-decoration: none;
@@ -36,5 +37,5 @@ a{
 .center-back {
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin: 20px auto;
 }

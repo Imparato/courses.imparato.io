@@ -23,7 +23,7 @@
 
       <% @cross_pages.sort_by{|cross_page| cross_page.tags.first.order}.each do |cross_page| %>
       <%= link_to "#{cross_page.slug}" do %>
-      <div class="btn btn-ghost">
+      <div class="btn btn-ghost" style="background-color: <%= cross_page.tags.first.color %>;">
         <p><%= cross_page.tags.first.name.upcase %><p>
         </div>
         <% end %>
@@ -49,7 +49,7 @@
       <div class="card-company-info">
         <div class="card-company-tags">
           <% company.tags.sort_by{|tag| tag.order}.each do |tag| %>
-            <div class="company-tag">
+            <div class="company-tag" style="background-color: <%= tag.color %>;">
               <%= tag.name.capitalize %>
             </div>
           <% end %>
