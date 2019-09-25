@@ -1,7 +1,6 @@
 FactoryBot.define do
   factory :cross_page do
     association :site
-    association :tag
     slug { "impro-a-marseille" }
     title { "Cours d'improvisation à Marseille" }
     description { "Trouvez les meilleurs cours d'improvisation sur Marseille facilement" }
