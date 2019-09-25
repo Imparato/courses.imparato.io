@@ -59,7 +59,7 @@ group :development, :test do
   gem "launchy"
   gem "webdrivers", "~> 4.0"
   # Adds support for Capybara system testing and selenium driver
-  gem "selenium-webdriver"
+  # gem "selenium-webdriver"
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem "minitest-reporters"
   gem 'capybara'

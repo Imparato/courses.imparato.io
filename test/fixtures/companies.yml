@@ -1,5 +1,20 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: Marseille
-  address: coursdetheatremarseille.com
+
+  name: testcompanyone
+  address: randomincompany
+  mail: randomincompany
+  description: MyText
+  lat: 1.5
+  lng: 1.5
+  site: one
+
+two:
+  name: testcompanytwo
+  address: randomincompany
+  mail: randomincompany
+  description: MyText
+  lat: 1.5
+  lng: 1.5
+  site: two

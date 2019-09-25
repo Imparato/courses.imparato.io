@@ -9,7 +9,6 @@ class SitesController < ApplicationController
     @site = Site.find_by(domain_name: @domain)
     @companies = Company.where(site: @site, active: true).page params[:page]
     @cross_pages = CrossPage.where(site: @site, active: true)
-    p @site.banner
   end
 
   def find_city_name_in_url

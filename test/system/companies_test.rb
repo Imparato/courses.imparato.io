@@ -3,7 +3,7 @@
 
 # require "application_system_test_case"
 
-# class CompaniesTest < ApplicationSystemTestCase
+class CompaniesTest < ApplicationSystemTestCase
 #   test "visiting the index" do
 #     visit "/"
 #     assert_selector "h1", text: "Souhaitez-vous vous afficher sous les projecteurs?"
@@ -31,4 +31,4 @@
 #     assert_equal "/companies/new", page.current_path
 #     assert_text "Proposez vos cours"
 #   end
-# end
+end
