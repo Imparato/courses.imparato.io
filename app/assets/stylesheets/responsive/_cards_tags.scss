@@ -31,7 +31,7 @@
   .cards-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 10px auto;
-     width: 60%;
+     width: 55%;
     display: flex;
     justify-content: space-around;
   }
@@ -41,7 +41,7 @@
 @media (min-width: 1200px) {
   .cards-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-     width: 50%;
+     width: 60%;
     display: flex;
     justify-content: space-around;
   }
