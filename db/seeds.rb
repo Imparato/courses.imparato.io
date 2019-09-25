@@ -203,14 +203,14 @@ marseilleweekend.save!
 
 puts "Creating tags"
 
-theatre = Tag.create!(name: "théâtre", order: 1)
-impro = Tag.create!(name: "impro", order: 2)
-lundi = Tag.create!(name: "lundi", order: 3)
-mardi = Tag.create!(name: "mardi", order: 4)
-mercredi = Tag.create!(name: "mercredi", order: 5)
-jeudi = Tag.create!(name: "jeudi", order: 6)
-vendredi = Tag.create!(name: "vendredi", order: 7)
-week_end = Tag.create!(name: "week end", order: 8)
+theatre = Tag.create!(name: "théâtre", order: 1, color: "#99F7E2")
+impro = Tag.create!(name: "impro", order: 2, color: "#AAE0FF")
+lundi = Tag.create!(name: "lundi", order: 3, color: "#FCEAB2")
+mardi = Tag.create!(name: "mardi", order: 4, color: "#A8B1FD")
+mercredi = Tag.create!(name: "mercredi", order: 5, color: "#E27FA0")
+jeudi = Tag.create!(name: "jeudi", order: 6, color: "#5465FC")
+vendredi = Tag.create!(name: "vendredi", order: 7, color: "#E22F2F")
+week_end = Tag.create!(name: "week end", order: 8, color: "#EBF0FF")
 
 puts "Adding tags to existing companies and crosspages"
 
@@ -239,13 +239,6 @@ marseillevendredi.tags << vendredi
 marseilleweekend.tags << week_end
 
 puts "All done"
-
-<<<<<<< HEAD
-
-
-
-
-
 
 puts "creating coursamontpellier as a site"
 
@@ -465,11 +458,9 @@ montpellierweekend.tags << week_end
 
 puts "All done"
 
-=======
 require_relative "./seed_toulouse"
 require_relative "./seed_nantes"
 require_relative "./seed_montpellier"
 require_relative "./seed_lyon"
 require_relative "./seed_bruxelles"
 require_relative "./seed_bordeaux"
->>>>>>> cee9f342205e7835b4faa31b3a4f88cf1bf1c07f
