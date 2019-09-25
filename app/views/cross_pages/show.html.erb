@@ -16,6 +16,7 @@
 <!-- company cards section -->
 <div class="container-cards">
   <% @companies.each do |company| %>
+
   <div class="card-company">
     <% if company.picture_url != nil %>
       <%= cl_image_tag company.picture %>
@@ -70,4 +71,5 @@
     </div>
   </div>
   <% end %>
+  <%= link_to 'Accueil', root_path, class:"btn btn-outline-primary center-back col-md-2" %>
 </div>
