@@ -32,3 +32,9 @@ a{
 .color-text-blue{
   color: $blue;
 }
+
+.center-back {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
