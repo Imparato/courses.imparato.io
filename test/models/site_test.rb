@@ -1,5 +1,5 @@
 require 'test_helper'
-
+require 'application_system_test_case'
 
 class SiteTest < ApplicationSystemTestCase
 
@@ -19,9 +19,9 @@ class SiteTest < ApplicationSystemTestCase
   test "click Contactez-nous" do
     marseille_site = FactoryBot.create(:site)
     SitesController.any_instance.stubs(:find_domain_from_url).returns(marseille_site.domain_name)
+    ContactsController.any_instance.stubs(:find_site).returns(marseille_site)
     contact_marseille = FactoryBot.create(:contact)
     # ContactsController.any_instance.stubs(:new).returns(marseille_site)
-    ContactsController.any_instance.stubs(:find_site_stub).returns(marseille_site)
     visit root_path
     click_on "Contactez-nous"
     save_and_open_page

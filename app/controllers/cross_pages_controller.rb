@@ -13,6 +13,7 @@ class CrossPagesController < ApplicationController
     @companies = @companies.select { |company| company.active == true }
   end
 
+
   private
 
   def find_cross_page
