@@ -3,12 +3,13 @@
 source "https://rubygems.org"
 git_source(:github) do |repo| "https://github.com/#{repo}.git" end
 
-ruby "2.5.3"
+ruby File.read(".ruby-version")
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.2.3"
-# Use postgresql as the database for Active Record
-gem "pg", ">= 0.18", "< 2.0"
+
+gem "mysql2"
+
 # Use Puma as the app server
 gem "puma", "~> 3.12"
 # Use SCSS for stylesheets
@@ -23,7 +24,7 @@ gem "font-awesome-sass", "~> 5.6.1"
 gem "jbuilder", "~> 2.5"
 gem "kaminari"
 gem "simple_form"
-gem 'webpacker', '~> 3.5'
+gem "webpacker", "~> 3.5"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -46,33 +47,17 @@ gem "draper"
 gem "redcarpet"
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "annotate"
-  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-  gem "dotenv-rails", groups: [:development, :test]
-  gem "rubocop", require: false
-  gem "rubocop-performance"
-  gem "rubocop-rails"
+  gem "dotenv-rails"
 
-  gem "capybara"
-  gem "chromedriver-helper"
-  gem "launchy"
-  gem "webdrivers", "~> 4.0"
-  # Adds support for Capybara system testing and selenium driver
-  # gem "selenium-webdriver"
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem "minitest-reporters"
-  gem 'capybara'
-  gem "minitest-rails"
-  gem "factory_bot_rails"
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "pry-byebug"
   gem "pry-rails"
-  gem 'mocha'
-end
 
-# Run against the latest stable release
-group :development, :test do
-  gem "rspec-rails", "~> 3.8"
+  gem "rubocop", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-rails", require: false
 end
 
 group :development do
@@ -84,7 +69,14 @@ group :development do
   gem "spring-watcher-listen", "~> 2.0.0"
 end
 
+group :test do
+  gem "capybara", require: false
+  gem "launchy", require: false
+  gem "selenium-webdriver"
 
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+  gem "factory_bot_rails"
+  gem "minitest-rails"
+  gem "minitest-reporters"
+  gem "mocha"
+  gem "webmock"
+end

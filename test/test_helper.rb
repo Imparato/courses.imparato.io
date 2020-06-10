@@ -6,10 +6,12 @@ require "rails/test_help"
 require "capybara/rails"
 require "capybara/minitest"
 require "minitest/rails"
-require 'mocha/minitest'
+require "mocha/minitest"
+
+require_relative "test_cloudinary_helper"
 
 class ActiveSupport::TestCase
-  # [...]
+  include TestCloudinaryHelper
 
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   include FactoryBot::Syntax::Methods
@@ -17,11 +19,13 @@ class ActiveSupport::TestCase
   # Devise test helpers
   include Warden::Test::Helpers
   Warden.test_mode!
+
+  def teardown
+    WebMock.reset!
+  end
 end
 
-Capybara.register_driver :headless_chrome do |app|
-  options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu window-size=1400,900])
-  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
-end
-Capybara.save_path = Rails.root.join('tmp/capybara')
-Capybara.javascript_driver = :headless_chrome
+Capybara.save_path = Rails.root.join("tmp/capybara")
+
+require "webmock/minitest"
+WebMock.disable_net_connect!(allow_localhost: true)

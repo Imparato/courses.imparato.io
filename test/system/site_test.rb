@@ -1,33 +1,44 @@
+# frozen_string_literal: true
+
+require "test_helper"
 require "application_system_test_case"
-require 'test_helper'
 
 class SiteTest < ApplicationSystemTestCase
+  setup do
+    mock_cloudinary_upload
+  end
+
   test "visiting the index" do
-    visit "http://coursdetheatremarseille.com:3000/"
-    # save_and_open_screenshot
+    marseille_site = FactoryBot.create(:site)
+    SitesController.any_instance.stubs(:find_domain_from_url).returns(marseille_site.domain_name)
+    visit root_path
+    # save_and_open_page
     assert_selector "h2", text: "Trouvez la troupe qui vous correspond"
   end
-  test "find one" do
-    assert_equal "Marseille", sites(:one).name
+
+  test "click Contactez-nous" do
+    marseille_site = FactoryBot.create(:site)
+    SitesController.any_instance.stubs(:find_domain_from_url).returns(marseille_site.domain_name)
+    ContactsController.any_instance.stubs(:find_site).returns(marseille_site)
+    # contact_marseille = FactoryBot.create(:contact)
+    visit root_path
+    click_on "Contactez-nous"
+    @site = marseille_site
+    # save_and_open_page
+    assert_equal new_contact_path, page.current_path
+    assert_text "Contactez-nous"
   end
-  # test "click Contactez-nous" do
-  #   visit "/"
-  #   click_on "Contactez-nous"
-  #   assert_equal "/contacts/new", page.current_path
-  #   assert_text "Contactez-nous"
-  # end
 
-  # test "click Proposez votre cours - navbar" do
-  #   visit "/"
-  #   click_link "first-course"
-  #   assert_equal "/companies/new", page.current_path
-  #   assert_text "Proposez vos cours"
-  # end
-
-  # test "click Proposez votre cours - footer" do
-  #   visit "/"
-  #   click_link "second-course"
-  #   assert_equal "/companies/new", page.current_path
-  #   assert_text "Proposez vos cours"
-  # end
+  test "click Proposez votre cours - navbar" do
+    marseille_site = FactoryBot.create(:site)
+    SitesController.any_instance.stubs(:find_domain_from_url).returns(marseille_site.domain_name)
+    company_marseille = FactoryBot.create(:company)
+    CompaniesController.any_instance.stubs(:find_site).returns(marseille_site)
+    visit root_path
+    click_link "first-course"
+    # save_and_open_page
+    @site = marseille_site
+    assert_equal new_company_path, page.current_path
+    assert_button "Envoyer"
+  end
 end
