@@ -30,6 +30,7 @@
 .env*
 .env*
 !.env.*.example
+!.env.test
 /public/packs
 /public/packs-test
 /public/uploads

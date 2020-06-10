@@ -77,4 +77,5 @@ group :test do
   gem "minitest-rails"
   gem "minitest-reporters"
   gem "mocha"
+  gem "webmock"
 end
