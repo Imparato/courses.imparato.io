@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 git_source(:github) do |repo| "https://github.com/#{repo}.git" end
 
-ruby "2.5.3"
+ruby File.read(".ruby-version")
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.2.3"
