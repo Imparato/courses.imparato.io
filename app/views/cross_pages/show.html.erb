@@ -21,7 +21,7 @@
     <% if company.picture_url != nil %>
       <%= cl_image_tag company.picture %>
     <% else %>
-      <%= image_tag("theatre#{company.id % 5}") %>
+      <%= image_tag("theatre#{company.id % 5}.jpg") %>
     <% end %>
     <div class="card-company-info">
       <div class="card-company-tags">
