@@ -21,10 +21,10 @@
     <!-- cards for cross-pages -->
     <div class="cards-container">
 
-      <% @cross_pages.sort_by{|cross_page| cross_page.tags.first.order}.each do |cross_page| %>
+      <% @cross_pages.each do |cross_page| %>
       <%= link_to "#{cross_page.slug}" do %>
-      <div class="btn btn-ghost" style="background-color: <%= cross_page.tags.first.color %>;">
-        <p><%= cross_page.tags.first.name.upcase %><p>
+      <div class="btn btn-ghost" style="background-color: <%= cross_page.tags.first&.color %>;">
+        <p><%= cross_page.tags.first&.name&.upcase %><p>
         </div>
         <% end %>
         <% end %>

@@ -8,7 +8,7 @@ class SitesController < ApplicationController
     # @domain_name = request.original_url
     @site = Site.find_by(domain_name: @domain)
     @companies = Company.where(site: @site, active: true).page params[:page]
-    @cross_pages = CrossPage.where(site: @site, active: true)
+    @cross_pages = CrossPage.where(site: @site, active: true).includes(:tags).sort_by { |cp| cp.tags.first&.order || -1 }
   end
 
   def find_city_name_in_url
