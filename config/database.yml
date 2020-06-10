@@ -16,11 +16,11 @@ default: &default
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
 
 development:
   <<: *default
   database: courses_imparato_io_development
+  socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -28,15 +28,16 @@ development:
 test:
   <<: *default
   database: courses_imparato_io_test
+  socket: /tmp/mysql.sock
 
 staging:
   <<: *default
-  database: courses_imparato_io_staging
-  username: courses_imparato_io
-  password: <%= ENV['COURSES_IMPARATO_IO_DATABASE_STAGING_PASSWORD'] %>
+  database: courses_io_staging
+  username: courses
+  password: <%= ENV['COURSES_IMPARATO_IO_DATABASE_PASSWORD'] %>
 
 production:
   <<: *default
-  database: courses_imparato_io_production
-  username: courses_imparato_io
-  password: <%= ENV['COURSES_IMPARATO_IO_DATABASE_PRODUCTION_PASSWORD'] %>
+  database: courses_io_production
+  username: courses
+  password: <%= ENV['COURSES_IMPARATO_IO_DATABASE_PASSWORD'] %>

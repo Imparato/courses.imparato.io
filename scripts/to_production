@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# Copyright (C) 2018 Colin Darie <colin@darie.eu>, 2018 Evolix <info@evolix.fr>
+# License: GNU AGPL-3+ (see full text in LICENSE file)
+
+set -e
+[ -n "$DEBUG" ] && set -x
+
+# git name-rev is fail
+CURRENT=`git rev-parse --abbrev-ref HEAD`
+TIMESTAMP=`date +"%s"`
+
+echo "👀 Fetching git repository information…"
+git fetch origin --quiet
+
+CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD`
+CURRENT_HEAD=`git rev-parse HEAD`
+ORIGIN_HEAD=`git rev-parse origin/master`
+
+if [ "master" != "${CURRENT_BRANCH}" ]; then
+  echo "😕 Only master can be deployed to production"
+  exit 1
+fi
+
+if [ ${CURRENT_HEAD} != ${ORIGIN_HEAD} ]; then
+  echo "😕 Local master is not up to date with origin"
+  exit 1
+fi
+
+read -p "👉 Deploy master to production ? (y/N) " confirmed
+
+if [ "${confirmed}" != "y" ]; then
+  echo "😞 Abort, bye."
+  exit 1
+fi
+
+echo "🚀 Deploying master to production !"
+bundle exec cap production deploy
+
+echo "😎 Done !"
