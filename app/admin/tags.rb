@@ -2,9 +2,7 @@
 
 ActiveAdmin.register Tag do
   permit_params do
-    permitted = [:name]
-    permitted << :other if params[:action] == "create" && current_admin_user
-    permitted
+    [:name, :order, :color]
   end
   filter :name, as: :select
 end
