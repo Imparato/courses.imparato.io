@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.1"
 
-set :application, "courses_imparato.io"
+set :application, "courses.imparato.io"
 set :repo_url, "https://github.com/Imparato/courses.imparato.io.git"
 
 # Default branch is :master
