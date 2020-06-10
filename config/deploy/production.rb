@@ -10,7 +10,7 @@ server "courses.dacotha.com", user: "courses", roles: %w{app web db}
 
 set :branch, "production"
 
-
+set :keep_releases, 5
 
 # role-based syntax
 # ==================
