@@ -13,34 +13,34 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
-window.onscroll = function() {updateNavOnScroll()};
+window.onscroll = function() {
+  updateNavOnScroll();
+};
 
 const initUpdateNavbarOnScroll = () => {
-  const navbar = document.querySelector('.navbar-imparato');
+  const navbar = document.querySelector(".navbar-imparato");
   if (navbar) {
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       if (window.scrollY >= window.innerHeight) {
-        navbar.classList.add('navbar-hidden');
+        navbar.classList.add("navbar-hidden");
       } else {
-        navbar.classList.remove('navbar-hidden');
+        navbar.classList.remove("navbar-hidden");
       }
     });
   }
-}
+};
 
 const updateNavOnScroll = () => {
-  const navbar = document.querySelector('.navbar-imparato');
+  const navbar = document.querySelector(".navbar-imparato");
   const beginScroll = window.scrollY;
   // console.log(window.scrollY);
   if (navbar) {
-      setTimeout(() => {
+    setTimeout(() => {
       if (window.scrollY - beginScroll < -200) {
-        navbar.classList.remove('navbar-hidden');
+        navbar.classList.remove("navbar-hidden");
+      } else if (window.scrollY - beginScroll > 200) {
+        navbar.classList.add("navbar-hidden");
       }
-      else if (window.scrollY - beginScroll > 200) {
-        console.log(window.scrollY - beginScroll);
-        navbar.classList.add('navbar-hidden');
-      }
-  }, 700)
-    }
+    }, 700);
+  }
 };
