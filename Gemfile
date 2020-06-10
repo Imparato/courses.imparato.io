@@ -23,7 +23,7 @@ gem "font-awesome-sass", "~> 5.6.1"
 gem "jbuilder", "~> 2.5"
 gem "kaminari"
 gem "simple_form"
-gem 'webpacker', '~> 3.5'
+gem "webpacker", "~> 3.5"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -61,13 +61,12 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   # gem "selenium-webdriver"
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem "minitest-reporters"
-  gem 'capybara'
-  gem "minitest-rails"
   gem "factory_bot_rails"
+  gem "minitest-rails"
+  gem "minitest-reporters"
+  gem "mocha"
   gem "pry-byebug"
   gem "pry-rails"
-  gem 'mocha'
 end
 
 # Run against the latest stable release
@@ -83,8 +82,6 @@ group :development do
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
 end
-
-
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
