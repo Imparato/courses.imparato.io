@@ -10,6 +10,8 @@ gem "rails", "~> 5.2.3"
 
 gem "mysql2"
 
+gem "dotenv-rails"
+
 # Use Puma as the app server
 gem "puma", "~> 3.12"
 # Use SCSS for stylesheets
@@ -36,6 +38,7 @@ gem "webpacker", "~> 3.5"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
+
 # Admin interface
 gem "activeadmin"
 gem "carrierwave", "~> 1.2"
@@ -48,7 +51,6 @@ gem "redcarpet"
 
 group :development, :test do
   gem "annotate"
-  gem "dotenv-rails"
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
