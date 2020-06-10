@@ -35,6 +35,7 @@ if [ "${confirmed}" != "y" ]; then
 fi
 
 echo "🚀 Deploying master to production !"
+git push --force origin master:production
 bundle exec cap production deploy
 
 echo "😎 Done !"
