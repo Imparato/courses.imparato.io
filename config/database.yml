@@ -31,12 +31,12 @@ test:
 
 staging:
   <<: *default
-  database: courses_imparato_io_staging
-  username: courses_imparato_io
-  password: <%= ENV['COURSES_IMPARATO_IO_DATABASE_STAGING_PASSWORD'] %>
+  database: courses_io_staging
+  username: courses
+  password: <%= ENV['COURSES_IMPARATO_IO_DATABASE_PASSWORD'] %>
 
 production:
   <<: *default
-  database: courses_imparato_io_production
-  username: courses_imparato_io
-  password: <%= ENV['COURSES_IMPARATO_IO_DATABASE_PRODUCTION_PASSWORD'] %>
+  database: courses_io_production
+  username: courses
+  password: <%= ENV['COURSES_IMPARATO_IO_DATABASE_PASSWORD'] %>
